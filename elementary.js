@@ -5,6 +5,7 @@ function multiply(a,b){
             a++;
             rep+=b;
         }
+        return -rep;
     }else{
         while (a>0){
             a--;
@@ -46,3 +47,5 @@ function modulo(a,b){
         return b;
     }
 }
+
+console.log(multiply(-22,123));
