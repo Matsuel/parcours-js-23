@@ -1,27 +1,60 @@
 function multiply(a, b) {
-    let rep=0;
-    for (let i=0; i<b; i++) {
-        rep += Math.abs(a);
+    let rep = 0
+    if (a<0){
+        a = -a
+        b = -b
     }
-    return (a<0 && b<0 || a>0 && b>0) ? rep : -rep;
+    for (let i=0;i<a;i++){
+        rep += b
+    }
+    return rep
 }
 
-function divide(a, b) {
-    let rep=0;
-    let absa = Math.abs(a);
-    let absb = Math.abs(b);
-    while (absa >= absb) {
-        absa -= absb;
-        rep++;
+function divide(a,b){
+    let rep = 0
+    let sign=0
+    if (b<0 && a>0){
+        b=-b
+        sign=-1
+    }else if (a<0 && b>0){
+        a=-a
+        sign=-1
+    }else if (a<0 && b<0){
+        a=-a
+        b=-b
     }
-    return (a<0 && b<0 || a>0 && b>0) ? rep : -rep;
+    while (a>=b){
+        a-=b
+        rep++
+    }
+    if (sign<0){
+        rep = -rep
+    }
+    return rep
 }
 
-function modulo(a, b) {
-    let absa = Math.abs(a);
-    let absb = Math.abs(b);
-    while (absa >= absb) {
-        absa -= absb;
+function modulo(a,b){
+    let sign=0
+    if (a<0 && b<0){
+        a=-a
+        b=-b
+        sign=-1
+    }else if (a<0 && b>0){
+        a=-a
+        sign=-1
+    }else if (b<0 && a>0){
+        b=-b
+        sign=0
     }
-    return (a<0) ? -absa : absa;
+    while (a>=b){
+        a-=b
+    }
+    if (sign<0){
+        a = -a
+    }
+    return a
 }
+
+console.log(multiply(5, 5))
+console.log(divide(-123, -22))
+console.log(modulo(-123, -22))
