@@ -6,7 +6,7 @@ const hashCode = str =>
 function blockChain(data, prev={index:0, hash:'0'}){
     const index = prev.index + 1;
     const hash = hashCode(index + prev.hash+ JSON.stringify(data));
-    const chain = (data, {index, hash}) => blockChain(data, {index, hash});
+    const chain = (data, [index, hash]) => blockChain(data, [index, hash]);
     return {index, hash, data, prev, chain};
 }
 
