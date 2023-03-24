@@ -11,8 +11,8 @@ function multiply(a,b){
             a--;
             rep+=b;
         }
+        return rep;
     }
-    return rep;
 }
 
 function divide(a,b){
