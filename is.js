@@ -1,5 +1,3 @@
-const is = {}
-
 is.num = (value) => Number.isInteger(value)
 
 is.nan =(value)=> Number.isNaN(value);
