@@ -16,6 +16,6 @@ is.obj = (value)=> Object.prototype.toString.call(value) === "[object Object]";
 
 is.fun = (value)=> typeof(value)=== "function";
 
-is.truthy= (value)=> !value;
+is.truthy= (value)=> !!value;
 
 is.falsy= (value)=> !value;
