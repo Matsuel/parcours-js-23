@@ -1,13 +1,13 @@
 function getAcceleration(obj){
-    if (obj==={}){
-        return "impossible";
-    }else if (obj.f!=0 && obj.m!=0){
+    if (obj.f!=undefined && obj.m!=undefined){
         return obj.f/obj.m;
-    }else if (obj.Δv!=0 && obj.Δt!=0){
+    }else if (obj.Δv!=undefined && obj.Δt!=undefined){
         return obj.Δv/obj.Δt;
-    }else if (obj.t!=0 && obj.d!=0){
+    }else if (obj.t!=undefined && obj.d!=undefined){
         return 2*obj.d/obj.t**2;
     }else{
         return "impossible"
     }
 }
+
+console.log(getAcceleration({}))
