@@ -12,4 +12,4 @@ const sourceObject = {
     bool: true,
     str: 'some text',
     log: console.log,
-  }
+}
