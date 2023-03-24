@@ -12,7 +12,7 @@ function slice(element, start=0, end=element.length){
         }
         return rep;
     }else{
-        for (let i=start;i<=end;i++){
+        for (let i=start;i<end;i++){
             rep.push(element.charAt(i));
         }
         return rep.join("");
