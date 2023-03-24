@@ -38,12 +38,10 @@ function modulo(a,b){
         }
         return a;
     }else{
-        while(b-a>=0){
-            b-=a;
-            rep++;
-        }
-        return b;
+        return a;
     }
 }
 
 console.log(divide(78,34))
+console.log(modulo(78,34))
+console.log(modulo(34,78))
