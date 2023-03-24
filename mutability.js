@@ -1,4 +1,4 @@
-let person = {
+const person = {
     name: "",
     age:1,
     country:"FR"
