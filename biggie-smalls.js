@@ -1,2 +1,2 @@
-let smalls= Number.MIN_VALUE*2;
+let smalls= Number.NEGATIVE_INFINITY;
 let biggie= Number.MAX_VALUE*2;
