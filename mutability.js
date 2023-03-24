@@ -1,4 +1,4 @@
-const person = {
+let person = {
     name: "",
     age:1,
     country:"FR"
@@ -7,4 +7,4 @@ const person = {
 const clone1= {...person};
 const clone2= {...person};
 
-const samePerson=person;
+let samePerson=person;
