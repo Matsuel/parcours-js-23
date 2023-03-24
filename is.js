@@ -1,4 +1,4 @@
-is.num = (value) => Number.isInteger(value);
+is.num = (value) => typeof(value)==="number";
 
 is.nan =(value)=> Number.isNaN(value);
 
