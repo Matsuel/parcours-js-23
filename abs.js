@@ -5,6 +5,8 @@ function isPositive(number){
 function abs(number){
     if (isPositive(number)){
         return number
+    }else if (number===0){
+        return 0;
     }else{
         return -number;
     }
