@@ -19,7 +19,8 @@ function dogYears(planet,age){
         rep=age*7*164.79132;
     }
 
-    return parseFloat(rep).toFixed(2);
+    rep= parseFloat(rep).toFixed(2);
+    return Number(rep);
 }
 
 console.log(dogYears("earth", 1000000000));
