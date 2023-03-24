@@ -32,13 +32,13 @@ function divide(a,b){
 function modulo(a,b){
     let rep=0;
     if (a>b){
-        while (a>=0){
+        while (a-b>=0){
             a-=b;
             rep++;
         }
         return a;
     }else{
-        while(b>=0){
+        while(b-a>=0){
             b-=a;
             rep++;
         }
