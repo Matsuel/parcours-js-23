@@ -1,8 +1,13 @@
+const hashCode = str =>
+  (
+    [...str].reduce((h, c) => (h = (h << 5) - h + c.charCodeAt(0)) & h, 0) >>> 0
+  ).toString(36)
+
 function blockChain(data, prev={index:0, hash:'0'}){
-    const chain = [prev+data];
     const index = prev.index + 1;
     const hash = hashCode(index + prev.hash+ JSON.stringify(data));
-    return {index, data, prev, hash};
+    const chain = data => blockChain(data, {index, hash});
+    return {index, data, prev, hash, chain};
 }
 
 const first = blockChain({ a: 1 })
