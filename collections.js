@@ -93,7 +93,13 @@ function strToObj(str){
 }
 
 function superTypeOf(obj){
-    return Object.prototype.toString.call(obj);
+    if (obj===null){
+        return 'null';
+    }else if (obj===undefined){
+        return 'undefined';
+    }else{
+        return Object.prototype.toString.call(obj).slice(8,-1);
+    }
 }
 
 const str = 'hello'
