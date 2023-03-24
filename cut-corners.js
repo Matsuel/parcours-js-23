@@ -5,13 +5,14 @@ function round(x){
             x+=1;
             rep+=1;
         }
+        rep-=1;
     }else{
         while (x>0){
             x-=1;
-            rep+=1;
+            rep-=1;
         }
     }
-    return rep-1;
+    return rep;
 }
 
 function ceil(x){
