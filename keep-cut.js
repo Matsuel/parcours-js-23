@@ -19,10 +19,10 @@ function keepLast(str){
 }
 
 function keepFirstLast(str){
-    if (str.length<=2){
+    if (str.length<=3){
         return str;
     }
     return str.slice(0,2)+str.slice(-2);
 }
 
-console.log(keepFirstLast('af'))
+console.log(keepFirstLast('afd'))
