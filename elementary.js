@@ -18,7 +18,7 @@ function multiply(a,b){
 function divide(a,b){
     let rep=0;
     if (a>b){
-        while (a>=0){
+        while (a-b>=0){
             a-=b;
             rep++;
         }
@@ -46,4 +46,4 @@ function modulo(a,b){
     }
 }
 
-console.log(multiply(-22,123));
+console.log(divide(78,34))
