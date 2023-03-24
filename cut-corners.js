@@ -11,7 +11,7 @@ function round(x){
             rep+=1;
         }
     }
-    return rep;
+    return rep-1;
 }
 
 function ceil(x){
