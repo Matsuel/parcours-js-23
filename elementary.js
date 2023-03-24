@@ -1,16 +1,19 @@
 function multiply(a,b){
     let rep=0;
     if (a<0){
+        a*=-1;
         while (a<0){
             a++;
             rep+=b;
         }
+        rep*=-1;
     }else{
-        while(a>0){
+        while (a>0){
             a--;
             rep+=b;
         }
     }
+    return rep;
 }
 
 function divide(a,b){
