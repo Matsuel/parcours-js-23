@@ -22,13 +22,11 @@ function divide(a,b){
             a-=b;
             rep++;
         }
+        return rep;
     }else{
-        while(b>=0){
-            b-=a;
-            rep++;
-        }
+        return 0;
     }
-    return rep;
+    
 }
 
 function modulo(a,b){
