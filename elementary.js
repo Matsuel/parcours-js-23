@@ -30,11 +30,12 @@ function modulo(a,b){
             a-=b;
             rep++;
         }
+        return a;
     }else{
         while(b>=0){
             b-=a;
             rep++;
         }
+        return b;
     }
-    return rep;
 }
