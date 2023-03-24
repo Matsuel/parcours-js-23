@@ -1,4 +1,5 @@
 function dogYears(planet,age){
+    age =age/31557600;
     if (planet==="earth"){
         return age*7;
     }else if (planet==="mercury"){
@@ -17,3 +18,5 @@ function dogYears(planet,age){
         return age*7*164.79132;
     }
 }
+
+console.log(dogYears("earth", 1000000000));
