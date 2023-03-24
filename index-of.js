@@ -1,5 +1,5 @@
-function indexOf(arr,val){
-    for(var i=0;i<arr.length;i++){
+function indexOf(arr,val,opt=0){
+    for(let i=opt;i<arr.length;i++){
         if(arr[i]===val){
         return i;
         }
@@ -7,13 +7,14 @@ function indexOf(arr,val){
     return -1;
 }
 
-function lastIndexOf(arr,val){
-    for(var i=arr.length-1;i>=0;i--){
+function lastIndexOf(arr,val,opt=0){
+    let rep=-1;
+    for(let i=opt;i<arr.length;i++){
         if(arr[i]===val){
-        return i;
+            rep=i;
         }
     }
-    return -1;
+    return rep;
 }
 
 function includes(arr,val){
