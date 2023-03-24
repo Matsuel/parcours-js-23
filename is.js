@@ -12,7 +12,7 @@ is.def= (value)=> typeof(value)=== !"undefined";
 
 is.arr = (value)=> Array.isArray(value);
 
-is.obj = (value)=> typeof(value)=== "object";
+is.obj = (value)=> typeof(value)=== "object" && value!==null;
 
 is.fun = (value)=> typeof(value)=== "function";
 
