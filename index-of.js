@@ -20,6 +20,3 @@ function lastIndexOf(arr,val,opt=arr.length-1){
 function includes(arr,val){
     return indexOf(arr,val)!==-1;
 }
-
-let t=1;
-console.log(lastIndexOf([t, 0, 0, t], t, 2));
