@@ -7,9 +7,9 @@ function indexOf(arr,val,opt=0){
     return -1;
 }
 
-function lastIndexOf(arr,val,opt=0){
+function lastIndexOf(arr,val,opt=arr.length-1){
     let rep=-1;
-    for(let i=opt;i<arr.length;i++){
+    for(let i=opt;i>=0;i--){
         if(arr[i]===val){
             rep=i;
         }
@@ -20,3 +20,6 @@ function lastIndexOf(arr,val,opt=0){
 function includes(arr,val){
     return indexOf(arr,val)!==-1;
 }
+
+let t=1;
+console.log(lastIndexOf([t, 0, 0, t], t, 2));
