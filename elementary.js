@@ -31,8 +31,7 @@ function divide(a,b){
 
 function modulo(a,b){
     if (a>b){
-        while (a-b>=0){
-            console.log(a);
+        while (a-b>0){
             a-=b;
         }
         return a;
