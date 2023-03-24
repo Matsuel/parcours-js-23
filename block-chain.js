@@ -1,4 +1,5 @@
 function blockChain(data, prev={index:0, hash:'0'}){
+    const chain = [prev+data];
     const index = prev.index + 1;
     const hash = hashCode(index + prev.hash+ JSON.stringify(data));
     return {index, data, prev, hash};
