@@ -7,3 +7,7 @@ function sign(number){
         return 1;
     }
 }
+
+function sameSign(a,b){
+    return sign(a)===sign(b);
+}
