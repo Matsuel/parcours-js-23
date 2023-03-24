@@ -18,4 +18,4 @@ is.fun = (value)=> typeof(value)=== "function";
 
 is.truthy= (value)=> !value;
 
-is.falsy= (value)=> !(!value);
+is.falsy= (value)=> !!value;
