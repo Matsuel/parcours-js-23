@@ -1,12 +1,12 @@
 function round(x){
     let rep=0;
     if (x<0){
-        while (x<=0){
+        while (x<0){
             x+=1;
             rep+=1;
         }
     }else{
-        while (x>=1){
+        while (x>1){
             x-=1;
             rep+=1;
         }
