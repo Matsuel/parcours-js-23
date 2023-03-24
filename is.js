@@ -12,7 +12,7 @@ is.def= (value)=> typeof(value)=== !"undefined";
 
 is.arr = (value)=> Array.isArray(value);
 
-is.obj = (value)=> typeof(value)=== "object" && !Object.values(value).every(o=>o !== null);
+is.obj = (value)=> console.log(Object.prototype.toString.call(value))// === "[object Object]";
 
 is.fun = (value)=> typeof(value)=== "function";
 
