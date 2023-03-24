@@ -1,12 +1,18 @@
-// const hashCode = str =>
-//   (
-//     [...str].reduce((h, c) => (h = (h << 5) - h + c.charCodeAt(0)) & h, 0) >>> 0
-//   ).toString(36)
+const hashCode = str =>
+  (
+    [...str].reduce((h, c) => (h = (h << 5) - h + c.charCodeAt(0)) & h, 0) >>> 0
+  ).toString(36)
 
 function blockChain(data, prev={index:0, hash:'0'}){
     const index = prev.index + 1;
     const hash = hashCode(index + prev.hash+ JSON.stringify(data));
     const chain = data => blockChain(data, {index, hash});
+    const block={
+        index,
+        hash,
+        data,
+        prev,
+    }
     return {index, hash, data, prev, chain};
 }
 
@@ -28,3 +34,6 @@ const fork = block
   .chain({ value: 335 })
   .chain({ some: 'data' })
   .chain({ cool: 'stuff' })
+
+
+console.log(chain)
