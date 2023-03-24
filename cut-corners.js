@@ -5,7 +5,6 @@ function round(x){
             x+=1;
             rep+=1;
         }
-        rep*=-1;
     }else{
         while (x>1){
             x-=1;
