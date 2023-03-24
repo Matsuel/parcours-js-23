@@ -18,7 +18,7 @@ function multiply(a,b){
 function divide(a,b){
     let rep=0;
     if (a>b){
-        while (a-b>0){
+        while (a>0){
             a-=b;
             rep++;
         }
@@ -31,7 +31,7 @@ function divide(a,b){
 
 function modulo(a,b){
     if (a>b){
-        while (a-b>0){
+        while (a>0){
             a-=b;
         }
         return a;
