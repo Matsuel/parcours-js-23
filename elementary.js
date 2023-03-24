@@ -18,7 +18,7 @@ function multiply(a,b){
 function divide(a,b){
     let rep=0;
     if (a>b){
-        while (b>a){
+        while (a>=b){
             a-=b;
             rep++;
         }
