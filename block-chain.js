@@ -3,12 +3,11 @@ const hashCode = str =>
     [...str].reduce((h, c) => (h = (h << 5) - h + c.charCodeAt(0)) & h, 0) >>> 0
   ).toString(36)
 
-function blockChain(data, previ={index:0, hash:'0'}){
-    const index = previ.index + 1;
-    const prev = previ;
-    const hash = hashCode(index + previ.hash+ JSON.stringify(data));
+function blockChain(data, prev={index:0, hash:'0'}){
+    const index = prev.index + 1;
+    const hash = hashCode(index + prev.hash+ JSON.stringify(data));
     const chain = data => blockChain(data, {index, hash});
-    return {index, data, prev, hash, chain};
+    return {index, hash, data, prev, chain};
 }
 
 // const first = blockChain({ a: 1 })
