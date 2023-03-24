@@ -8,7 +8,7 @@ is.bool = (value)=> typeof(value)=== "boolean";
 
 is.undef = (value)=> typeof(value)=== "undefined";
 
-is.def= (value)=> typeof(value) !== "undefined" && value.length > 0;
+is.def= (value)=> typeof(value) !== "undefined" && value !== null;
 
 is.arr = (value)=> Array.isArray(value);
 
