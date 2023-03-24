@@ -21,5 +21,5 @@ function slice(element, start=0, end=element.length-1){
 
 
 console.log(slice([1, 2, 3, 4, 5, 4, 3, 2, 1], 2, 4));
-console.log(slice("1,2,3,4,5", 2));
+console.log(slice("12345", 2));
 console.log(slice('abcdef', 0, 2))
