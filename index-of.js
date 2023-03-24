@@ -9,7 +9,7 @@ function indexOf(arr,val,opt=0){
 
 function lastIndexOf(arr,val,opt=0){
     let rep=-1;
-    for(let i=opt;i<arr.length-opt;i++){
+    for(let i=opt;i<arr.length;i++){
         if(arr[i]===val){
             rep=i;
         }
