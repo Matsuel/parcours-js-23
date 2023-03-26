@@ -115,5 +115,3 @@ console.log(ceil(NaN));
 console.log(trunc(NaN));
 
 console.log(round(["a","a"]));
-
-console.log(Math.round("a"));
