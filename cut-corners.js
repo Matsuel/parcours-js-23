@@ -63,12 +63,17 @@ function floor(x){
 }
 
 function trunc(x){
+    let nb =0;
+    if (x> 0xffffffff){
+        x -= 0xffffffff;
+        nb += 0xffffffff;
+    }
     let isneg = false;
     if (x<0){
         isneg = true;
         x = -x;
     }
-    let nb =0;
+    
     while (!(x < 1 && x > -1)){
         x--;
         nb++;
