@@ -1,5 +1,6 @@
 function round(x){
     if (x> Number.MAX_SAFE_INTEGER || x < Number.MIN_SAFE_INTEGER) return x;
+    if (Number.isNaN(x)) return x;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -89,3 +90,9 @@ console.log(round(-0.69));
 
 
 console.log(trunc(42.587));
+
+console.log(round(Infinity));
+
+console.log(round(-Infinity));
+
+console.log(round(NaN));
