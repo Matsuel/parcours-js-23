@@ -1,4 +1,5 @@
 function round(x){
+    if (x> Number.MAX_SAFE_INTEGER || x < Number.MIN_SAFE_INTEGER) return x;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -64,10 +65,6 @@ function floor(x){
 
 function trunc(x){
     let nb =0;
-    if (x> 0xffffffff){
-        x -= 0xffffffff;
-        nb += 0xffffffff;
-    }
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -84,11 +81,11 @@ function trunc(x){
     }
 }
 
-console.log(floor(3.0000001));
+console.log(floor(-.95));
 
-console.log(ceil(1));
+console.log(ceil(.95));
 
-console.log(round(1.5));
+console.log(round(-0.69));
 
 
-console.log(trunc(0));
+console.log(trunc(42.587));
