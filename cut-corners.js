@@ -5,7 +5,7 @@ function round(x){
         x = -x;
     }else{
         let nb =0;
-        while (!(int < 1 && int > -1)){
+        while (!(x < 1 && x > -1)){
             x-=1;
             nb+=1;
         }
