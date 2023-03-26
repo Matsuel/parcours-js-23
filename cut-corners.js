@@ -1,6 +1,6 @@
 function round(x){
     if (x>= Number.MAX_SAFE_INTEGER || x <= Number.MIN_SAFE_INTEGER) return x;
-    if (typeof(x) !== "number" || Number.isNaN(x)) return NaN;
+    if (Number.isNaN(x)) return NaN;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -29,7 +29,7 @@ function round(x){
 
 function ceil(x){
     if (x>= Number.MAX_SAFE_INTEGER || x <= Number.MIN_SAFE_INTEGER) return x;
-    if (typeof(x) !== "number" || Number.isNaN(x)) return NaN;
+    if (Number.isNaN(x)) return NaN;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -49,7 +49,7 @@ function ceil(x){
 
 function floor(x){
     if (x>= Number.MAX_SAFE_INTEGER || x <= Number.MIN_SAFE_INTEGER) return x;
-    if (typeof(x) !== "number" || Number.isNaN(x)) return NaN;
+    if (Number.isNaN(x)) return NaN;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -69,7 +69,7 @@ function floor(x){
 
 function trunc(x){
     if (x>= Number.MAX_SAFE_INTEGER || x <= Number.MIN_SAFE_INTEGER) return x;
-    if (typeof(x) !== "number" || Number.isNaN(x)) return NaN;
+    if (Number.isNaN(x)) return NaN;
     let nb =0;
     let isneg = false;
     if (x<0){
