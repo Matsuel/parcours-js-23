@@ -9,7 +9,7 @@ function round(x){
             x-=1;
             nb+=1;
         }
-        if (x>=0.5){
+        if (x<0.5){
             if (isneg){
                 return -nb;
             }else{
@@ -32,7 +32,7 @@ function ceil(x){
         x = -x;
     }else{
         let nb =0;
-        while (x>=1 && x >=0){
+        while  (!(x < 1 && x >= 0)){
             x-=1;
             nb+=1;
         }
@@ -51,7 +51,7 @@ function floor(x){
         x = -x;
     }else{
         let nb =0;
-        while (x>=1 && x >=0){
+        while (!(x < 1 && x > -1)){
             x-=1;
             nb+=1;
         }
@@ -70,7 +70,7 @@ function trunc(x){
         x = -x;
     }else{
         let nb =0;
-        while (x>=1 && x >=0){
+        while (!(x < 1 && x > -1)){
             x-=1;
             nb+=1;
         }
