@@ -32,6 +32,7 @@ function ceil(x){
     if (Number.isNaN(x)) return NaN;
     let isneg = false;
     if (x===0) return 0;
+    if (x===-0) return -0;
     if (x<0){
         isneg = true;
         x = -x;
