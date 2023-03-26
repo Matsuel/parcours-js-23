@@ -26,7 +26,7 @@ function round(x){
 }
 
 function ceil(x){
-    if (x===0) return 0;
+    if (!x) return 0;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -73,7 +73,6 @@ function trunc(x){
         isneg = true;
         x = -x;
     }
-    
     while (!(x < 1 && x > -1)){
         x--;
         nb++;
@@ -85,6 +84,6 @@ function trunc(x){
     }
 }
 
-console.log(round(3.0000001));
+console.log(floor(3.0000001));
 
 console.log(ceil(1));
