@@ -45,21 +45,21 @@ function ceil(x){
 }
 
 function floor(x){
-    // let isneg = false;
-    // if (x<0){
-    //     isneg = true;
-    //     x = -x;
-    // }
-    // let nb =0;
-    // while (!(x < 1 && x > -1)){
-    //     x--;
-    //     nb++;
-    // }
-    // if (isneg){
-    //     return -nb-1;
-    // }else{
-    //     return nb;
-    // }
+    let isneg = false;
+    if (x<0){
+        isneg = true;
+        x = -x;
+    }
+    let nb =0;
+    while (!(x < 1 && x > -1)){
+        x--;
+        nb++;
+    }
+    if (isneg){
+        return -nb-1;
+    }else{
+        return nb;
+    }
 }
 
 function trunc(x){
