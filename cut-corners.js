@@ -3,26 +3,26 @@ function round(x){
     if (x<0){
         isneg = true;
         x = -x;
-    }else{
-        let nb =0;
-        while (!(x < 1 && x > -1)){
-            x-=1;
-            nb+=1;
+    }
+    let nb = 0;
+    while (!(x < 1 && x > -1)){
+        x--;
+        nb++;
+    }
+    if (x<0.5){
+        if (isneg){
+            return -nb;
+        }else{
+            return nb;
         }
-        if (x<0.5){
-            if (isneg){
-                return -nb;
-            }else{
-                return nb;
-            }
-        } else {
-            if (isneg){
-                return -nb-1;
-            }else{
-                return nb;
-            }
+    } else {
+        if (isneg){
+            return -nb-1;
+        }else{
+            return nb;
         }
     }
+    
 }
 
 function ceil(x){
@@ -33,8 +33,8 @@ function ceil(x){
     }else{
         let nb =0;
         while  (!(x < 1 && x >= 0)){
-            x-=1;
-            nb+=1;
+            x--;
+            nb++;
         }
         if (isneg){
             return -nb;
@@ -52,8 +52,8 @@ function floor(x){
     }else{
         let nb =0;
         while (!(x < 1 && x > -1)){
-            x-=1;
-            nb+=1;
+            x--;
+            nb++;
         }
         if (isneg){
             return -nb-1;
@@ -71,8 +71,8 @@ function trunc(x){
     }else{
         let nb =0;
         while (!(x < 1 && x > -1)){
-            x-=1;
-            nb+=1;
+            x--;
+            nb++;
         }
         if (isneg){
             return -nb;
@@ -82,4 +82,4 @@ function trunc(x){
     }
 }
 
-console.log(round(1.5));
+console.log(round(-3));
