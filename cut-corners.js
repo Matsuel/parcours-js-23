@@ -63,25 +63,25 @@ function floor(x){
 }
 
 function trunc(x){
-    let nb =0;
-    if (x> 0xffffffff){
-        x -= 0xffffffff;
-        nb += 0xffffffff;
-    }
-    let isneg = false;
-    if (x<0){
-        isneg = true;
-        x = -x;
-    }
-    while (!(x < 1 && x > -1)){
-        x--;
-        nb++;
-    }
-    if (isneg){
-        return -nb;
-    }else{
-        return nb;
-    }
+    // let nb =0;
+    // if (x> 0xffffffff){
+    //     x -= 0xffffffff;
+    //     nb += 0xffffffff;
+    // }
+    // let isneg = false;
+    // if (x<0){
+    //     isneg = true;
+    //     x = -x;
+    // }
+    // while (!(x < 1 && x > -1)){
+    //     x--;
+    //     nb++;
+    // }
+    // if (isneg){
+    //     return -nb;
+    // }else{
+    //     return nb;
+    // }
 }
 
 console.log(floor(3.0000001));
