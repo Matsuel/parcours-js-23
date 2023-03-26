@@ -1,6 +1,6 @@
 function round(x){
     if (x>= Number.MAX_SAFE_INTEGER || x <= Number.MIN_SAFE_INTEGER) return x;
-    if (Number.isNaN(x)) return NaN;
+    if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -29,7 +29,7 @@ function round(x){
 
 function ceil(x){
     if (x>= Number.MAX_SAFE_INTEGER || x <= Number.MIN_SAFE_INTEGER) return x;
-    if (Number.isNaN(x)) return NaN;
+    if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
     let isneg = false;
     if (x===0) return 0;
     if (x===-0) return -0;
@@ -51,7 +51,7 @@ function ceil(x){
 
 function floor(x){
     if (x>= Number.MAX_SAFE_INTEGER || x <= Number.MIN_SAFE_INTEGER) return x;
-    if (Number.isNaN(x)) return NaN;
+    if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -71,7 +71,7 @@ function floor(x){
 
 function trunc(x){
     if (x>= Number.MAX_SAFE_INTEGER || x <= Number.MIN_SAFE_INTEGER) return x;
-    if (Number.isNaN(x)) return NaN;
+    if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
     let nb =0;
     let isneg = false;
     if (x<0){
@@ -117,3 +117,5 @@ function trunc(x){
 // console.log(trunc(NaN));
 
 // console.log(round(["a","a"]));
+
+console.log(typeof(4))
