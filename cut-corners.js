@@ -30,17 +30,16 @@ function ceil(x){
     if (x<0){
         isneg = true;
         x = -x;
+    }
+    let nb =0;
+    while  (!(x < 1 && x >= 0)){
+        x--;
+        nb++;
+    }
+    if (isneg){
+        return -nb;
     }else{
-        let nb =0;
-        while  (!(x < 1 && x >= 0)){
-            x--;
-            nb++;
-        }
-        if (isneg){
-            return -nb;
-        }else{
-            return nb+1;
-        }
+        return nb+1;
     }
 }
 
@@ -49,17 +48,16 @@ function floor(x){
     if (x<0){
         isneg = true;
         x = -x;
+    }
+    let nb =0;
+    while (!(x < 1 && x > -1)){
+        x--;
+        nb++;
+    }
+    if (isneg){
+        return -nb-1;
     }else{
-        let nb =0;
-        while (!(x < 1 && x > -1)){
-            x--;
-            nb++;
-        }
-        if (isneg){
-            return -nb-1;
-        }else{
-            return nb;
-        }
+        return nb;
     }
 }
 
@@ -68,18 +66,17 @@ function trunc(x){
     if (x<0){
         isneg = true;
         x = -x;
+    }
+    let nb =0;
+    while (!(x < 1 && x > -1)){
+        x--;
+        nb++;
+    }
+    if (isneg){
+        return -nb;
     }else{
-        let nb =0;
-        while (!(x < 1 && x > -1)){
-            x--;
-            nb++;
-        }
-        if (isneg){
-            return -nb;
-        }else{
-            return nb;
-        }
+        return nb;
     }
 }
 
-console.log(round(-3));
+console.log(round(3.32));
