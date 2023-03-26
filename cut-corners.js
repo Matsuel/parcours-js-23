@@ -19,7 +19,7 @@ function round(x){
             if (isneg){
                 return -nb-1;
             }else{
-                return nb-1;
+                return nb;
             }
         }
     }
@@ -81,3 +81,5 @@ function trunc(x){
         }
     }
 }
+
+console.log(round(1.5));
