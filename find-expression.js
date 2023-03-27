@@ -8,8 +8,3 @@ function findExpression(number,rep, nb){
     else return findExpression(number-4, rep+" "+add4, nb+4)
 }
 
-console.log(findExpression(8))
-
-"8= 1*2*2+4"
-
-"on a 8 si nb/2 < nb-4 rep*2, nb*2"
