@@ -12,7 +12,7 @@ function greedyQuery(str){
             rep.push(query);
         }
     }
-    return query;
+    return rep;
 }
 
 function notSoGreedy(str){
