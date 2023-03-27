@@ -5,7 +5,6 @@ function ionOut(str){
     let regexion= new RegExp(/ion/g);
     for (const word of arr){
         if (word.match(regexiont)){
-            console.log(word.includes(","))
             if (word.includes(".")|| word.includes(",")|| word.includes("?")){
                 let newword= word.replace(regexion,"")
                 rep.push(newword.substring(0,newword.length-1))
