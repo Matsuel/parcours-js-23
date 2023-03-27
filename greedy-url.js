@@ -16,5 +16,13 @@ function greedyQuery(str){
 }
 
 function notSoGreedy(str){
-    return str;
+    let dataSet = getURL(str);
+    let rep= [];
+    const linkRegexWith2Query= new RegExp(/\?([-a-zA-Z0-9\[\],()@%]*=[-a-zA-Z0-9\[\],()@%]*&){1,2}([-a-zA-Z0-9\[\],()@%]*=[-a-zA-Z0-9\[\],()@%]*)$/g);
+    for (const query of dataSet){
+        if (query.match(linkRegexWith2Query)){
+            rep.push(query);
+        }
+    }
+    return rep;
 }
