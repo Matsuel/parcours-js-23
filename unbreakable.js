@@ -9,25 +9,40 @@ function split(str, sep=",") {
     let mot ="";
     for (let i = 0; i < str.length; i++) {
         if (str[i]===sep){
-            rep.push(mot);
-            mot = "";
-            i++;
+            if (mot[0]===" "){
+                rep.push(mot.slice(1, mot.length));
+                mot = "";
+            }else{
+                rep.push(mot);
+                mot = "";
+                i++;
+            }
         }
 
         if (str[i]=== sep[0]){
             for (let j=1; j<sep.length;j++){
                 if (str[i+j]===sep[j]){
                     if (j===sep.length-1){
-                        rep.push(mot);
-                        mot = "";
-                        i += j;
+                        if (mot[0]===" "){
+                            rep.push(mot.slice(1, mot.length));
+                            mot = "";
+                            i += j;
+                        }else{
+                            rep.push(mot.slice(0, mot.length));
+                            mot = "";
+                            i += j;
+                        }
                     }
                 }
             }
         }
         mot+=str[i];
     }
-    rep.push(mot);
+    if (mot[0]===" "){
+        rep.push(mot.slice(1, mot.length));
+    }else{
+        rep.push(mot.slice(0, mot.length));
+    }
     return rep;
 }
 
