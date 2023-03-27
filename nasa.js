@@ -1,9 +1,17 @@
 function nasa(int){
-    if (int % 3 === 0 && int % 5 === 0){
-        return "NASA";
-    }else if (int % 3 === 0){
-        return "NA";
-    }else if (int % 5 === 0){
-        return "SA";
+    let rep ="";
+    for (let i=1; i<int;i++){
+        if (i%3===0 && i%5===0){
+            rep += "NASA ";
+        }else if (i%3===0){
+            rep += "NA ";
+        }else if (i%5===0){
+            rep += "SA ";
+        }else{
+            rep += i.toString() + " ";
+        }
     }
+    return rep;
 }
+
+console.log(nasa(15));
