@@ -1,7 +1,7 @@
 function round(x){
     if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
-    if (x>= 3000 || x <= 3000) return x;
-    console.log(x>= 3000 || x <= 3000);
+    if (x>= 3000 || x <= -3000) return x;
+    console.log(x>= 3000 || x <= -3000);
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -28,7 +28,7 @@ function round(x){
 
 function ceil(x){
     if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
-    if (x>= 3000 || x<= 3000) return x;
+    if (x>= 3000 || x<= -3000) return x;
     let isneg = false;
     if (x===0) return 0;
     if (x===-0) return -0;
@@ -49,7 +49,7 @@ function ceil(x){
 
 function floor(x){
     if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
-    if (x>= 3000 || x<= 3000) return x;
+    if (x>= 3000 || x<= -3000) return x;
     let isneg = false;
     if (x<0){
         isneg = true;
@@ -68,7 +68,7 @@ function floor(x){
 
 function trunc(x){
     if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
-    if (x>= 3000 || x<= 3000) return x;
+    if (x>= 3000 || x<= -3000) return x;
     let nb =0;
     let isneg = false;
     if (x<0){
