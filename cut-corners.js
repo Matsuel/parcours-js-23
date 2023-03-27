@@ -89,33 +89,37 @@ function trunc(x){
     }
 }
 
-// console.log(floor(-.95));
+console.log(floor(-.95));
 
-// console.log(ceil(.95));
+console.log(ceil(.95));
 
-// console.log(round(-0.69));
+console.log(round(-0.69));
 
 
-// console.log(trunc(42.587));
+console.log(trunc(42.587));
 
-// console.log(trunc(Infinity));
+console.log(trunc(Infinity));
 
-// console.log(round(Infinity));
+console.log(round(Infinity));
 
-// console.log(round(-Infinity));
+console.log(round(-Infinity));
 
-// console.log(floor(-Infinity));
+console.log(floor(-Infinity));
 
-// console.log(ceil(Infinity));
+console.log(ceil(Infinity));
 
-// console.log(round(NaN));
+console.log(round(NaN));
 
-// console.log(floor(NaN));
+console.log(floor(NaN));
 
-// console.log(ceil(NaN));
+console.log(ceil(NaN));
 
-// console.log(trunc(NaN));
+console.log(trunc(NaN));
 
-// console.log(round(["a","a"]));
+console.log(round(["a","a"]));
 
 console.log(typeof(4))
+
+let c = new Object();
+
+console.log(round(c));
