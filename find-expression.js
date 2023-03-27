@@ -5,7 +5,7 @@ function findExpression(number){
     let nb=1;
     let rep="1";
 
-    while (nb<=number){
+    while (nb<number){
         if (nb === number) return rep;
         if (nb*2 < number){
             rep+= " "+ mul2;
