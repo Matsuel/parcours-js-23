@@ -1,17 +1,17 @@
-// const add4 = '+4'
-// const mul2 = '*2'
+const add4 = '+4'
+const mul2 = '*2'
 
-function findExpression(number,rep){
-    if (rep===undefined) rep='1';
-    if (number%2!==0){
-        return undefined
-    }
-    else{
-        if (number-4>0){
-            return findExpression(number-4, rep+add4)
-        }else{
-            return findExpression(number/2, rep+mul2)
-        }
-    }
-
+function findExpression(number,rep, nb){
+    console.log(number)
+    if (!(number%2===0) && rep===undefined) return undefined;
+    if (rep===undefined && nb===undefined) rep='1'+" "+mul2, nb=1;
+    if (number/2<= number-4) return findExpression(number/2, rep+" "+mul2, nb*2)
+    if (number===0) return rep;
+    else return findExpression(number-4, rep+" "+add4, nb+4)
 }
+
+console.log(findExpression(8))
+
+"8= 1*2*2+4"
+
+"on a 8 si nb/2 < nb-4 rep*2, nb*2"
