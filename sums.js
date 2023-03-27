@@ -16,7 +16,7 @@ function sums(n) {
     }
 
     findPartitions(1, n);
-    return rep;
+    return rep.slice(0,-1);
 }
 
 
@@ -24,3 +24,5 @@ function sums(n) {
 console.log(sums(4));
 
 console.log(sums(6))
+
+console.log(sums(2))
