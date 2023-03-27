@@ -70,6 +70,10 @@ function trunc(x){
     if (Number.isNaN(x)|| (typeof(x)!== typeof(4))) return NaN;
     if (x>= 3000 || x<= -3000) return x;
     let nb =0;
+    if (x > 0xfffffffff) {
+        x -= 0xfffffffff;
+        nb += 0xfffffffff;
+    }
     let isneg = false;
     if (x<0){
         isneg = true;
