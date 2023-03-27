@@ -1,4 +1,7 @@
-function split(str, sep=",") {
+function split(str, sep) {
+    if (sep === null) {
+        sep = ",";
+    }
     let rep = [];
     if (sep === "") {
         for (let i = 0; i < str.length; i++) {
@@ -6,43 +9,16 @@ function split(str, sep=",") {
         }
         return rep;
     }
-    let mot ="";
-    for (let i = 0; i < str.length; i++) {
-        if (str[i]===sep){
-            if (mot[0]===" "){
-                rep.push(mot.slice(1, mot.length));
-                mot = "";
-            }else{
-                rep.push(mot);
-                mot = "";
-                i++;
-            }
+    let end = str.indexOf(sep);
+    while (end > -1) {
+        end = str.indexOf(sep);
+        if (end === -1) {
+            break;
         }
-
-        if (str[i]=== sep[0]){
-            for (let j=1; j<sep.length;j++){
-                if (str[i+j]===sep[j]){
-                    if (j===sep.length-1){
-                        if (mot[0]===" "){
-                            rep.push(mot.slice(1, mot.length));
-                            mot = "";
-                            i += j;
-                        }else{
-                            rep.push(mot.slice(0, mot.length));
-                            mot = "";
-                            i += j;
-                        }
-                    }
-                }
-            }
-        }
-        mot+=str[i];
+        rep.push(str.slice(0, end));
+        str = str.slice(end + sep.length);
     }
-    if (mot[0]===" "){
-        rep.push(mot.slice(1, mot.length));
-    }else{
-        rep.push(mot.slice(0, mot.length));
-    }
+    rep.push(str);
     return rep;
 }
 
@@ -67,3 +43,5 @@ console.log(join(elements));
 console.log(split('ggg - ddd - b', ' - '))
 
 console.log(split('a b c', ' '))
+
+console.log(split('ee,ff,g,', ','))
