@@ -1,7 +1,7 @@
 function triangle(str, int){
     let rep="";
     for (let i=0; i<=int; i++){
-        for (j=1;j<=i;j++){
+        for (let j=1;j<=i;j++){
             rep+=str;
         }
         rep+="\n";
