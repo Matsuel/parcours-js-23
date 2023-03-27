@@ -1,13 +1,14 @@
 function reverse(element){
-    let rep = [];
     if (element instanceof Array){
+        let rep = [];
         for (let i=element.length-1; i>=0;i--){
             rep.push(element[i]);
         }
         return rep;
     }else {
+        let rep = "";
         for (let i=element.length-1; i>=0;i--){
-            rep.push(element[i]);
+            rep += element[i];
         }
         return  rep;
     }
@@ -16,3 +17,5 @@ function reverse(element){
 console.log(reverse([1,2,3,4,5]));
 
 console.log(reverse("Hello World"));
+
+console.log(reverse("pouet"))
