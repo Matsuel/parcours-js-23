@@ -1,14 +1,25 @@
-function split(str,sep=","){
-    if (sep === "") return str;
+function split(str, sep=",") {
     let rep = [];
-    let mot ="";
-    for (let i=0; i<str.length;i++){
-        if (str[i] === sep){
-            rep.push(mot);
-            mot = "";
-        } else {
-            mot += str[i];
+    if (sep === "") {
+        for (let i = 0; i < str.length; i++) {
+            rep.push(str[i]);
         }
+        return rep;
+    }
+    let mot ="";
+    for (let i = 0; i < str.length; i++) {
+        if (str[i]=== sep[0]){
+            for (let j=1; j<sep.length;j++){
+                if (str[i+j]===sep[j]){
+                    if (j===sep.length-1){
+                        rep.push(mot);
+                        mot = "";
+                        i += j;
+                    }
+                }
+            }
+        }
+        mot+=str[i];
     }
     rep.push(mot);
     return rep;
@@ -32,4 +43,4 @@ const elements = ['Fire', 'Air', 'Water'];
 
 console.log(join(elements));
 
-console.log(split(split('ggg - ddd - b', ' - ')))
+console.log(split('ggg - ddd - b', ' - '))
