@@ -16,8 +16,18 @@ function split(str,sep=""){
 
 const str = 'The quick brown fox jumps over the lazy dog.';
 
-const words = str.split(' ');
-
-console.log(words)
-
 console.log(split(str, ' '))
+
+
+function join(array, sep=","){
+    let rep="";
+    for (let i=0; i<array.length-1;i++){
+        rep += array[i]+ sep;
+    }
+    rep += array[array.length-1];
+    return rep;
+}
+
+const elements = ['Fire', 'Air', 'Water'];
+
+console.log(join(elements));
