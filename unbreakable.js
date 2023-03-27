@@ -1,4 +1,4 @@
-function split(str,sep=""){
+function split(str,sep=","){
     if (sep === "") return str;
     let rep = [];
     let mot ="";
@@ -31,3 +31,5 @@ function join(array, sep=","){
 const elements = ['Fire', 'Air', 'Water'];
 
 console.log(join(elements));
+
+console.log(split(split('ggg - ddd - b', ' - ')))
