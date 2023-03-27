@@ -16,4 +16,4 @@ function findExpression(number){
     return rep;
 }
 
-console.log(findExpression(8))
+// console.log(findExpression(8))
