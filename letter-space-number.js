@@ -1,5 +1,5 @@
 function letterSpaceNumber(str){
-    letterSpaceNumberregex= new RegExp(/[a-z] [0-9](?![a-z0-9])/gi);
+    let letterSpaceNumberregex= new RegExp(/[a-z] [0-9](?![a-z0-9])/gi);
     let arr = str.match(letterSpaceNumberregex);
     if (arr !== null) return arr;
     else return [];
