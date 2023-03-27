@@ -10,7 +10,10 @@ function groupPrice(str){
             rep.push(price.match(/[0-9]+/g)[1]);
         }
     }
-    return rep;
+
+    return [rep];
 }
 
 console.log(groupPrice("USD12.31"))
+
+console.log(groupPrice('The price of the cereals is $4.00.'))
