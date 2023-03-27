@@ -1,4 +1,4 @@
-function getUrl(str){
+function getURL(str){
     return str;
 }
 
