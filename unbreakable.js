@@ -11,6 +11,7 @@ function split(str, sep=",") {
         if (str[i]===sep){
             rep.push(mot);
             mot = "";
+            i++;
         }
 
         if (str[i]=== sep[0]){
