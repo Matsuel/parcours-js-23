@@ -4,7 +4,7 @@ function getURL(str){
 }
 
 function greedyQuery(str){
-    dataSet= getURL(str);
+    let dataSet= getURL(str);
     const linkRegexWith3Query= new RegExp(/\?([-a-zA-Z0-9\[\],()@]*=[-a-zA-Z0-9\[\],()@]*&){2,255}([-a-zA-Z0-9\[\],()@]*=[-a-zA-Z0-9\[\],()@]*)/g);
     return dataSet.match(linkRegexWith3Query)
 }
