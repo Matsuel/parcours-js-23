@@ -1,6 +1,6 @@
 function nasa(int){
     let rep ="";
-    for (let i=1; i<int;i++){
+    for (let i=1; i<=int;i++){
         if (i%3===0 && i%5===0){
             rep += "NASA ";
         }else if (i%3===0){
