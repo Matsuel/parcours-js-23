@@ -87,130 +87,130 @@ function trunc(x){
     return nb;
 }
 
-console.log(round());
-console.log(ceil());
-console.log(floor());
-console.log(trunc());
+// console.log(round());
+// console.log(ceil());
+// console.log(floor());
+// console.log(trunc());
 
-console.log(round(undefined));
-console.log(ceil(undefined));
-console.log(floor(undefined));
-console.log(trunc(undefined));
+// console.log(round(undefined));
+// console.log(ceil(undefined));
+// console.log(floor(undefined));
+// console.log(trunc(undefined));
 
-console.log(round(null));
-console.log(ceil(null));
-console.log(floor(null));
-console.log(trunc(null));
+// console.log(round(null));
+// console.log(ceil(null));
+// console.log(floor(null));
+// console.log(trunc(null));
 
-console.log(round(true));
-console.log(ceil(true));
-console.log(floor(true));
-console.log(trunc(true));
+// console.log(round(true));
+// console.log(ceil(true));
+// console.log(floor(true));
+// console.log(trunc(true));
 
-console.log(round(false));
-console.log(ceil(false));
-console.log(floor(false));
-console.log(trunc(false));
+// console.log(round(false));
+// console.log(ceil(false));
+// console.log(floor(false));
+// console.log(trunc(false));
 
-console.log(round(0));
-console.log(ceil(0));
-console.log(floor(0));
-console.log(trunc(0));
+// console.log(round(0));
+// console.log(ceil(0));
+// console.log(floor(0));
+// console.log(trunc(0));
 
-console.log(round(-0));
-console.log(ceil(-0));
-console.log(floor(-0));
-console.log(trunc(-0));
-
-
-console.log(round(0.5));
-console.log(ceil(0.5));
-console.log(floor(0.5));
-console.log(trunc(0.5));
-
-console.log(round(-0.5));
-console.log(ceil(-0.5));
-console.log(floor(-0.5));
-console.log(trunc(-0.5));
-
-console.log(round(1.5));
-console.log(ceil(1.5));
-console.log(floor(1.5));
-console.log(trunc(1.5));
-
-console.log(round(-1.5));
-console.log(ceil(-1.5));
-console.log(floor(-1.5));
-console.log(trunc(-1.5));
+// console.log(round(-0));
+// console.log(ceil(-0));
+// console.log(floor(-0));
+// console.log(trunc(-0));
 
 
-console.log(round(Infinity));
-console.log(ceil(Infinity));
-console.log(floor(Infinity));
-console.log(trunc(Infinity));
+// console.log(round(0.5));
+// console.log(ceil(0.5));
+// console.log(floor(0.5));
+// console.log(trunc(0.5));
 
-console.log(round(-Infinity));
-console.log(ceil(-Infinity));
-console.log(floor(-Infinity));
-console.log(trunc(-Infinity));
+// console.log(round(-0.5));
+// console.log(ceil(-0.5));
+// console.log(floor(-0.5));
+// console.log(trunc(-0.5));
 
-console.log(round(NaN));
-console.log(ceil(NaN));
-console.log(floor(NaN));
-console.log(trunc(NaN));
+// console.log(round(1.5));
+// console.log(ceil(1.5));
+// console.log(floor(1.5));
+// console.log(trunc(1.5));
 
-console.log(round({}));
-console.log(ceil({}));
-console.log(floor({}));
-console.log(trunc({}));
+// console.log(round(-1.5));
+// console.log(ceil(-1.5));
+// console.log(floor(-1.5));
+// console.log(trunc(-1.5));
 
-console.log(round({name:45}));
-console.log(ceil({name:45}));
-console.log(floor({name:45}));
-console.log(trunc({name:45}));
 
-console.log(round(4.5));
-console.log(ceil(4.5));
-console.log(floor(4.5));
-console.log(trunc(4.5));
+// console.log(round(Infinity));
+// console.log(ceil(Infinity));
+// console.log(floor(Infinity));
+// console.log(trunc(Infinity));
 
-console.log(round(-4.5));
-console.log(ceil(-4.5));
-console.log(floor(-4.5));
-console.log(trunc(-4.5));
+// console.log(round(-Infinity));
+// console.log(ceil(-Infinity));
+// console.log(floor(-Infinity));
+// console.log(trunc(-Infinity));
 
-console.log(round(4.4));
-console.log(ceil(4.4));
-console.log(floor(4.4));
-console.log(trunc(4.4));
+// console.log(round(NaN));
+// console.log(ceil(NaN));
+// console.log(floor(NaN));
+// console.log(trunc(NaN));
 
-console.log(round(-4.4));
-console.log(ceil(-4.4));
-console.log(floor(-4.4));
-console.log(trunc(-4.4));
+// console.log(round({}));
+// console.log(ceil({}));
+// console.log(floor({}));
+// console.log(trunc({}));
 
-console.log(round(BigInt));
-console.log(ceil(BigInt));
-console.log(floor(BigInt));
-console.log(trunc(BigInt));
+// console.log(round({name:45}));
+// console.log(ceil({name:45}));
+// console.log(floor({name:45}));
+// console.log(trunc({name:45}));
 
-console.log(round(Symbol()));
-console.log(ceil(Symbol()));
-console.log(floor(Symbol()));
-console.log(trunc(Symbol()));
+// console.log(round(4.5));
+// console.log(ceil(4.5));
+// console.log(floor(4.5));
+// console.log(trunc(4.5));
 
-console.log(round(42 / +0));
-console.log(ceil(42 / +0));
-console.log(floor(42 / +0));
-console.log(trunc(42 / +0));
+// console.log(round(-4.5));
+// console.log(ceil(-4.5));
+// console.log(floor(-4.5));
+// console.log(trunc(-4.5));
 
-console.log(round(42 / -0));
-console.log(ceil(42 / -0));
-console.log(floor(42 / -0));
-console.log(trunc(42 / -0));
+// console.log(round(4.4));
+// console.log(ceil(4.4));
+// console.log(floor(4.4));
+// console.log(trunc(4.4));
 
-// console.log(round(Date.now()));
-// console.log(ceil(Date.now()));
-// console.log(floor(Date.now()));
-// console.log(trunc(Date.now()));
+// console.log(round(-4.4));
+// console.log(ceil(-4.4));
+// console.log(floor(-4.4));
+// console.log(trunc(-4.4));
+
+// console.log(round(BigInt));
+// console.log(ceil(BigInt));
+// console.log(floor(BigInt));
+// console.log(trunc(BigInt));
+
+// console.log(round(Symbol()));
+// console.log(ceil(Symbol()));
+// console.log(floor(Symbol()));
+// console.log(trunc(Symbol()));
+
+// console.log(round(42 / +0));
+// console.log(ceil(42 / +0));
+// console.log(floor(42 / +0));
+// console.log(trunc(42 / +0));
+
+// console.log(round(42 / -0));
+// console.log(ceil(42 / -0));
+// console.log(floor(42 / -0));
+// console.log(trunc(42 / -0));
+
+// // console.log(round(Date.now()));
+// // console.log(ceil(Date.now()));
+// // console.log(floor(Date.now()));
+// // console.log(trunc(Date.now()));
 
