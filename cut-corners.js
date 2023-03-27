@@ -212,15 +212,3 @@ console.log(trunc(42 / -0));
 // console.log(floor(Date.now()));
 // console.log(trunc(Date.now()));
 
-
-console.log(typeof(Date.now()));
-
-date = new Date();
-
-data= 22;
-
-console.log(Object.prototype.toString.call(date));
-
-console.log(round(date));
-
-console.log(round(Date.now()));
