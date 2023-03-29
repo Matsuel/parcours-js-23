@@ -1,39 +1,42 @@
 function addWeek(date){
-    let d = date.toString().split(" ")[2];
-    console.log(d);
+    let d = date.getTime() + 62135596800000;
+    d/= 86400000;
+    d= d%14;
     switch(d){
-        case "01":
+        case 0:
             return "Monday";
-        case "02":
+        case 1:
             return "Tuesday";
-        case "03":
+        case 2:
             return "Wednesday";
-        case "04":
+        case 3:
             return "Thursday";
-        case "05":
+        case 4:
             return "Friday";
-        case "06":
+        case 5:
             return "Saturday";
-        case "07":
+        case 6:
             return "Sunday";
-        case "08":
+        case 7:
             return "secondMonday";
-        case "09":
+        case 8:
             return "secondTuesday";
-        case "10":
+        case 9:
             return "secondWednesday";
-        case "11":
+        case 10:
             return "secondThursday";
-        case "12":
+        case 11:
             return "secondFriday";
-        case "13":
+        case 12:
             return "secondSaturday";
-        case "14":
+        case 13:
             return "secondSunday";
     }
 }
 
 console.log(addWeek(new Date('0001-01-02')))
+
+console.log(addWeek(new Date('2025-08-11')))
 
 
 function timeTravel(date){
