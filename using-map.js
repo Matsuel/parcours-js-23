@@ -20,10 +20,7 @@ function upperCasingStates(arr){
 
 function fahrenheitToCelsius(arr){
     return arr.map((obj) => {
-        obj
-        .map ((obj) =>{ 
-            obj.temp= (obj.temp-32)*5/9;
-        })
+        obj.temp = (obj.temp-32)*5/9;
     })
 }
 
