@@ -25,9 +25,10 @@ function fahrenheitToCelsius(arr){
 }
 
 function trimTemp(arr){
-    return arr.map((obj) => 
-        obj.temperature = obj.temperature.replace(" ","")
-    );
+    return arr.map((obj) => {
+        obj.temperature = obj.temperature.replace(" ","");
+        return obj;
+    });
 }
 
 function tempForecasts(arr){
