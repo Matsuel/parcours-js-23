@@ -8,19 +8,14 @@ function citiesOnly(arr){
 }
 
 function upperCasingStates(arr){
-    let rep=[];
-    let m= arr.map(item=> item);
-    for (const obj of m){
-        let str="";
-        let city= obj["city"];
-        let wordcity= city.split(" ");
-        for (const word of wordcity){
-            word= word[0].toUpperCase()+word.slice(1);
-            str+=word+" ";
-        }
-        rep.push(str.substring(0,str.length-1));
-    }
-    return rep;
+    return arr.map((obj) => 
+        obj
+            .split(" ")
+            .map((word) => {
+                return word[0].toUpperCase() + word.slice(1);
+            })
+            .join(" ")
+    );
 }
 
 function fahrenheitToCelsius(arr){
