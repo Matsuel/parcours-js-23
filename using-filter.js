@@ -11,7 +11,9 @@ function filter5Vowels(arr){
 }
 
 function filter1DistinctVowel(arr){
-    return arr.filter((obj)=> obj.match(/[aeiou]/gi).length ===1);
+    return arr.filter(
+        (obj)=> new Set(obj.toLowerCase().match(/[aeiou]/gi)).size ===1
+    )
 }
 
 let d = filterShortStateName([
@@ -40,3 +42,16 @@ let d = filterShortStateName([
   ])
 
   console.log(a)
+
+  let z =filter1DistinctVowel([
+    'Alabama',
+    'Alaska',
+    'Arkansas',
+    'Kansas',
+    'Maryland',
+    'Mississippi',
+    'New Jersey',
+    'Tennessee',
+  ])
+
+  console.log(z);
