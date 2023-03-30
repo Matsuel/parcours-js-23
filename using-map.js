@@ -10,7 +10,7 @@ function citiesOnly(arr){
 function upperCasingStates(arr){
     let rep=[];
     const map= arr.map(obj);
-    for (const city of arr){
+    for (const city of map){
         let wordcity = city.split(" ");
         let c="";
         for (const word of wordcity){
