@@ -25,12 +25,9 @@ function fahrenheitToCelsius(arr){
 }
 
 function trimTemp(arr){
-    let rep=[];
-    for (let obj of arr){
-        obj.temp= obj[temp].replace(" ","");
-        rep.push(obj);
-    }
-    return rep;
+    return arr.map((obj) => 
+        obj.trim()
+    );
 }
 
 function tempForecasts(arr){
