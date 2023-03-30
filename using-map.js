@@ -19,11 +19,12 @@ function upperCasingStates(arr){
 }
 
 function fahrenheitToCelsius(arr){
-    let rep=[];
-    for (const temp of arr){
-        rep.push((temp-32)*0.5556);
-    }
-    return rep;
+    return arr.map((obj) => {
+        obj
+        .map ((obj) =>{ 
+            obj.temp= (obj.temp-32)*5/9;
+        })
+    })
 }
 
 function trimTemp(arr){
