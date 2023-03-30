@@ -9,15 +9,15 @@ function citiesOnly(arr){
 
 function upperCasingStates(arr){
     let rep=[];
-    const map= arr.map(obj => obj.state);
-    for (const city of map){
-        let wordcity = city.split(" ");
-        let c="";
+    let m= arr.map(item=> item);
+    for (const obj of m){
+        let str="";
+        let wordcity= obj.city.split(" ");
         for (const word of wordcity){
-            c+=word.charAt(0).toUpperCase()+word.slice(1)+" ";
+            word= word[0].toUpperCase()+word.slice(1);
+            str+=word+" ";
         }
-        rep.push(c.substring(0,c.length-1));
-        //rep.push(city.charAt(0).toUpperCase()+city.slice(1));
+        rep.push(str.substring(0,str.length-1));
     }
     return rep;
 }
