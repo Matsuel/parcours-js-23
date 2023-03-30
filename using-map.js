@@ -26,7 +26,7 @@ function fahrenheitToCelsius(arr){
 
 function trimTemp(arr){
     return arr.map((obj) => 
-        obj.trim()
+        obj.temperature.trim()
     );
 }
 
