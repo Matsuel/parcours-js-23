@@ -18,10 +18,11 @@ function filter1DistinctVowel(arr){
 
 function multiFilter(arr){
     return arr.map((obj)=>{
-        new Set(obj.tag.toLowerCase().match(/[aeiou]/gi)).size >=1 &&
-        obj.capital.length >=8 &&
-        obj.name.match(!/^[aeiou]/i) &&
-        obj.region!== "South"
+        let state = obj.name.toLowerCase().match(/[aeiou]/gi);
+        let name = obj.name.match(!/^[aeiou]/i);
+        let capital = obj.capital.length >=8;
+        let region = obj.region!== "South";
+        return state && name && capital && region;
     })
 }
 
