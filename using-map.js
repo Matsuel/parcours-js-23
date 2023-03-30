@@ -10,7 +10,12 @@ function citiesOnly(arr){
 function upperCasingStates(arr){
     let rep=[];
     for (const city of arr){
-        rep.push(city.charAt(0).toUpperCase()+city.slice(1));
+        let wordcity = city.split(" ");
+        let c="";
+        for (const word of wordcity){
+            c+=word.charAt(0).toUpperCase()+word.slice(1)+" ";
+        }
+        //rep.push(city.charAt(0).toUpperCase()+city.slice(1));
     }
     return rep;
 }
