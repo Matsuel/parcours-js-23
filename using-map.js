@@ -1,7 +1,8 @@
 function citiesOnly(arr){
     let rep=[]; 
-    for (const obj of arr){
-        rep.push(obj.city);
+    const map= arr.map(obj => obj.city);
+    for (const obj of map){
+        rep.push(obj);
     }
     return rep;
 }
@@ -40,3 +41,16 @@ function tempForecasts(arr){
     }
     return rep;
 }
+
+let t1= citiesOnly([
+    {
+      city: 'Los Angeles',
+      temperature: '  101 °F   ',
+    },
+    {
+      city: 'San Francisco',
+      temperature: ' 84 ° F   ',
+    },
+  ])
+
+console.log(t1)
