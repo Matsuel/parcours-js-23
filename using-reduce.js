@@ -1,3 +1,3 @@
-function adder(arr){
-    return arr.reduce((acc, obj) => acc + obj);
+function adder(arr, num){
+    return arr.reduce((acc, curr) => acc+curr, num);
 }
