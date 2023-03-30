@@ -20,7 +20,7 @@ function upperCasingStates(arr){
 
 function fahrenheitToCelsius(arr){
     return arr.map((obj) => {
-        obj = (obj-32)*5/9;
+        Math.floor((Number(obj.slice(0,-2))-32)*(5/9))+ "°C"
     })
 }
 
