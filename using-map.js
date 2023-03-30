@@ -12,7 +12,8 @@ function upperCasingStates(arr){
     let m= arr.map(item=> item);
     for (const obj of m){
         let str="";
-        let wordcity= obj.city.split(" ");
+        let city= obj.city;
+        let wordcity= city.split(" ");
         for (const word of wordcity){
             word= word[0].toUpperCase()+word.slice(1);
             str+=word+" ";
