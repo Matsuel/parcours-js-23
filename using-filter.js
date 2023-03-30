@@ -1,5 +1,5 @@
 function filterShortStateName(arr){
-    return arr.filter((obj) => obj.state.length<7);
+    return arr.filter((obj) => obj.length<7);
 }
 
 function filterStartVowel(arr){
@@ -7,9 +7,25 @@ function filterStartVowel(arr){
 }
 
 function filter5Vowels(arr){
-    return arr.filter((obj)=> obj.city.match(/[aeiou]/gi && obj.city.length > 5));
+    return arr.filter((obj)=> obj.city.match(/[aeiou]/gi && obj.length > 5));
 }
 
 function filter1DistinctVowel(arr){
-    
+
 }
+
+let d = filterShortStateName([
+    'Alaska',
+    'Hawaii',
+    'Idaho',
+    'Iowa',
+    'Kansas',
+    'Maine',
+    'Nevada',
+    'Ohio',
+    'Oregon',
+    'Texas',
+    'Utah',
+  ])
+
+  console.log(d)
