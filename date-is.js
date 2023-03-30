@@ -2,7 +2,7 @@ function isValid(date) {
   // return date instanceof Date;
 
   if (new Date(date).toString() === "Invalid date")return false;
-  if (!(date instanceof Date) && typeof date !== "number")return d=false;
+  if (!(date instanceof Date) && typeof date !== "number")return false;
   return true;
 
 }
