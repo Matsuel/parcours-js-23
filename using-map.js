@@ -13,7 +13,7 @@ function upperCasingStates(arr){
         let wordcity = city.split(" ");
         let c="";
         for (const word of wordcity){
-            c+=word.charAt(0).toUpperCase()+word.slice(1)+" ";
+            c+=word.charAt(0).toUpperCase()+word.slice(1);
         }
         rep.push(c);
         //rep.push(city.charAt(0).toUpperCase()+city.slice(1));
