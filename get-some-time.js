@@ -8,7 +8,7 @@ function firstDayWeek(nbWeek, year) {
     let d = new Date(day, month, year);
     // console.log(day)
     if (d.getDay()!==1) {
-        while (d.getDay() !== 1) {
+        while (d.getDay() !== 2) {
             d.setDate(d.getDate() - 1);
             day--;
         }   
