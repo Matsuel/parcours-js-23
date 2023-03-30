@@ -11,7 +11,7 @@ function filter5Vowels(arr){
 }
 
 function filter1DistinctVowel(arr){
-
+    return arr.filter((obj)=> obj.match(/[aeiou]/gi).length ===1);
 }
 
 let d = filterShortStateName([
