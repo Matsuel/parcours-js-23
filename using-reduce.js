@@ -11,3 +11,10 @@ function sumOrMul (arr,n){
         n===undefined? 0 : n
     );
 }
+
+function funcExec(arr,value){
+    return arr.reduce((acc, obj) => 
+        typeof obj === "function" ? obj(acc) : acc,
+        value === undefined ? 0 : value,
+    );
+}
