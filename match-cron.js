@@ -7,10 +7,19 @@ function matchCron(cron, date){
     let minute = date.getMinutes();
     let dayOfWeek = date.getDay();
 
-    if (crons[0] !== "*" && crons[0] !== minute) return false;
-    if (crons[1] !== "*" && crons[1] !== hour) return false;
-    if (crons[2] !== "*" && crons[2] !== day) return false;
-    if (crons[3] !== "*" && crons[3] !== month) return false;
-    if (crons[4] !== "*" && crons[4] !== dayOfWeek) return false;
-    else return true;
+    let dateInfos = [day, month, hour, minute, dayOfWeek];
+
+    console.log(day, month, hour, minute, dayOfWeek)
+
+    console.log(crons[0], crons[1], crons[2], crons[3], crons[4])
+
+    for (let i = 0; i < crons.length; i++) {
+        if (crons[i] !== '*' && crons[i] !== dateInfos[i].toString()) return false;
+
+    }
+    return true;
 }
+
+let one = matchCron('* * * * 1', new Date('2020-06-01 00:00:00'));
+
+console.log(one)
