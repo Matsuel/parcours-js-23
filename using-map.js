@@ -32,13 +32,11 @@ function trimTemp(arr){
 }
 
 function tempForecasts(arr){
-    let rep="";
-    for (const obj of arr){
-        let stringobj="";
-        stringobj= fahrenheitToCelsius(obj.temp)+"°Celsius in "+obj.city+", "+obj.state;
-        rep+=stringobj+'\n';
+    return arr.map((obj) => {
+        let c= fahrenheitToCelsius([obj.temperature])+ "°Celsius in "+ obj.city+ obj.state;
+        return c;
     }
-    return rep;
+    );
 }
 
 let t1= citiesOnly([
