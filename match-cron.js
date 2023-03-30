@@ -7,7 +7,7 @@ function matchCron(cron, date){
     let minute = date.getMinutes();
     let dayOfWeek = date.getDay();
 
-    let dateInfos = [day, month, hour, minute, dayOfWeek];
+    let dateInfos = [minute, hour, day, month, dayOfWeek];
 
     console.log(day, month, hour, minute, dayOfWeek)
 
@@ -23,3 +23,7 @@ function matchCron(cron, date){
 let one = matchCron('* * * * 1', new Date('2020-06-01 00:00:00'));
 
 console.log(one)
+
+let two= matchCron('* * * 2 *', new Date('2021-02-01 00:00:00'))
+
+console.log(two)
