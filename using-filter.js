@@ -16,6 +16,15 @@ function filter1DistinctVowel(arr){
     )
 }
 
+function multiFilter(arr){
+    return arr.map((obj)=>{
+        new Set(obj.tag.toLowerCase().match(/[aeiou]/gi)).size >=1 &&
+        obj.capital.length >=8 &&
+        obj.name.match(!/^[aeiou]/i) &&
+        obj.region!== "South"
+    })
+}
+
 let d = filterShortStateName([
     'Alaska',
     'Hawaii',
@@ -55,3 +64,28 @@ let d = filterShortStateName([
   ])
 
   console.log(z);
+
+  let yt = multiFilter([
+    { tag: 'CA', name: 'California', capital: 'Sacramento', region: 'West' },
+    { tag: 'HI', name: 'Hawaii', capital: 'Honolulu', region: 'West' },
+    {
+      tag: 'MO',
+      name: 'Missouri',
+      capital: 'Jefferson City',
+      region: 'Midwest',
+    },
+    {
+      tag: 'PA',
+      name: 'Pennsylvania',
+      capital: 'Harrisburg',
+      region: 'Northeast',
+    },
+    {
+      tag: 'RI',
+      name: 'Rhode Island',
+      capital: 'Providence',
+      region: 'Northeast',
+    },
+  ])
+
+  console.log(yt);
