@@ -17,13 +17,14 @@ function filter1DistinctVowel(arr){
 }
 
 function multiFilter(arr){
-    return arr.map((obj)=>{
-        let state = obj.name.toLowerCase().match(/[aeiou]/gi);
-        let name = obj.name.match(!/^[aeiou]/i);
+    return arr.filter((obj)=>{
+        let name = !/^[aeiou]/i.test(obj.name);
         let capital = obj.capital.length >=8;
         let region = obj.region!== "South";
-        return state && name && capital && region;
-    })
+        let tag = /[aeiou]/i.test(obj.tag);
+        return tag && name && capital && region;
+    });
+    return arr;
 }
 
 let d = filterShortStateName([
