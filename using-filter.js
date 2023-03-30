@@ -3,7 +3,7 @@ function filterShortStateName(arr){
 }
 
 function filterStartVowel(arr){
-    return arr.filter((obj) => obj.city[0].match(/[aeiou]/i));
+    return arr.filter((obj) => obj[0].match(/[aeiou]/i));
 }
 
 function filter5Vowels(arr){
