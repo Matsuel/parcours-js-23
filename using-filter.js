@@ -7,7 +7,7 @@ function filterStartVowel(arr){
 }
 
 function filter5Vowels(arr){
-    return arr.filter((obj)=> obj.city.match(/[aeiou]/gi && obj.length > 5));
+    return arr.filter((obj)=> obj.match(/[aeiou]/gi && obj.length > 5));
 }
 
 function filter1DistinctVowel(arr){
