@@ -2,9 +2,18 @@ function firstDayWeek(nbWeek, year) {
     if (nbWeek===1) return "01-01-"+year;
     let rep ="";
     let date = getDateFromWeek(nbWeek, year);
+    // console.log(date)
     let day = date.getDate();
     let month = date.getMonth() + 1;
-    let yearDate = date.getFullYear();
+    let d = new Date(day, month, year);
+    // console.log(day)
+    if (d.getDay()!==1) {
+        while (d.getDay() !== 1) {
+            d.setDate(d.getDate() - 1);
+            day--;
+        }   
+    }
+    console.log(day)
     if (day < 10) {
         rep += "0" + day;
     }else {
@@ -16,8 +25,6 @@ function firstDayWeek(nbWeek, year) {
         rep += "-" + month;
     }
     rep += "-" + year;
-    console.log(yearDate)
-    let d = new Date(yearDate, month, day);
     console.log(d.getDay())
     return rep;
 }
@@ -51,3 +58,7 @@ console.log("=============== RESULT 2 =====================")
 console.log(two)  
 
 console.log(three)
+
+let four = firstDayWeek(43, '1983')
+
+console.log(four)
