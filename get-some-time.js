@@ -15,7 +15,8 @@ function firstDayWeek(nbWeek, year) {
     }else {
         rep += "-" + month;
     }
-    rep += "-" + yearDate;
+    rep += "-" + year;
+    console.log(yearDate)
     let d = new Date(yearDate, month, day);
     console.log(d.getDay())
     return rep;
@@ -42,7 +43,7 @@ function getDateFromWeek(week, year) {
 
 let one = firstDayWeek(1, '1000')
 let two = firstDayWeek(52, '1000')
-let three= firstDayWeek(2, '2022')
+let three= firstDayWeek(2, '0001')
 
 console.log("=============== RESULT 1 =====================")
 console.log(one)
