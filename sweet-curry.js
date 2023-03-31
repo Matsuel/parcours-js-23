@@ -11,5 +11,11 @@ function add3(a){
 }
 
 function sub4(a){
-    return (b)=>(c)=>(d)=>(e)=>a-b-c-d-e;
+    return function (b){
+        return function(c){
+            return function(d){
+                return a-b-c-d;
+            }
+        }
+    }
 }
