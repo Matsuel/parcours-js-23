@@ -15,6 +15,6 @@ function oneLongWord(arr){
 function noLongWords(arr){
     return arr.every(
         (item) =>
-        item.length < 10
+        item.length < 7
     );
 }
