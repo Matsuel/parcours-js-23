@@ -1,5 +1,5 @@
 function forEach (arr, func){
-    for (const item of arr){
-        console.log(func(item));
+    for (let i = 0; i < arr.length; i++){
+        func(arr[i],i, arr);
     }
 }
