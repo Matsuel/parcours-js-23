@@ -1,4 +1,4 @@
-export const getArchitects= () =>{
+function getArchitects() {
     return [
         document.querySelectorAll('body a'),
         document.querySelectorAll('body span'),
@@ -6,23 +6,25 @@ export const getArchitects= () =>{
     ]
 }
 
-export const getClassical = () => {
+function getClassical()  {
     return [
         document.getElementsByClassName('a.classical'),
         document.getElementsByClassName('a:not(.classical)'),
     ]
 }
 
-export const getActive = () => {
+function getActive ()  {
     return [
         document.querySelectorAll('a.classical.active'),
         document.querySelectorAll('a.classical:not(.active)'),
     ]
 }
 
-export const getBonannoPisano = () => {
+function getBonannoPisano()  {
     return [
         document.getElementById('bonanno-pisano'),
         document.querySelectorAll('a.classical.active'),
     ]
 }
+
+export { getArchitects, getClassical, getActive, getBonannoPisano };
