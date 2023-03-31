@@ -38,11 +38,11 @@ function reduceRight(arr, func){
     }
 }
 
-const adder = (a, b) => a + b
-let a=fold([1, 2, 3], adder, 2) // returns 8 (2 + 1 + 2 + 3)
-let b=foldRight([1, 2, 3], adder, 2) // returns 8 (2 + 3 + 2 + 1)
-let c = reduce([1, 2, 3], adder) // returns 6 (1 + 2 + 3)
-let d = reduceRight([1, 2, 3], adder) // returns 6 (3 + 2 + 1)
+// const adder = (a, b) => a + b
+// let a=fold([1, 2, 3], adder, 2) // returns 8 (2 + 1 + 2 + 3)
+// let b=foldRight([1, 2, 3], adder, 2) // returns 8 (2 + 3 + 2 + 1)
+// let c = reduce([1, 2, 3], adder) // returns 6 (1 + 2 + 3)
+// let d = reduceRight([1, 2, 3], adder) // returns 6 (3 + 2 + 1)
 
 console.log(a);
 console.log(b);
