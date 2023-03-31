@@ -44,7 +44,7 @@ function reduceRight(arr, func){
 // let c = reduce([1, 2, 3], adder) // returns 6 (1 + 2 + 3)
 // let d = reduceRight([1, 2, 3], adder) // returns 6 (3 + 2 + 1)
 
-console.log(a);
-console.log(b);
-console.log(c);
-console.log(d);
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
