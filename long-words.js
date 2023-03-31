@@ -11,3 +11,10 @@ function oneLongWord(arr){
         item.length >= 10
     );
 }
+
+function noLongWords(arr){
+    return arr.every(
+        (item) =>
+        item.length < 10
+    );
+}
