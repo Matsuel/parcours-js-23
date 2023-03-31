@@ -1,7 +1,9 @@
 function getArchitects() {
+    const a = document.getElementsByTagName("a");
+    const other = document.getElementsByTagName("span");
     return [
-        document.getElementsByTagName("a"),
-        document.getElementsByTagName("span"),
+        a,
+        other,
     ];
 }
 
