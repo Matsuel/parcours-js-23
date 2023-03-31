@@ -3,6 +3,6 @@ function flow(el) {
         if (args.length >1 ){
             args= [arr[0](...args)];
         }
-        return args.reduce((acc, fn) => fn(acc), el[0]);
+        return el.reduce((acc, fn) => fn(acc), args[0]);
     };
 }
