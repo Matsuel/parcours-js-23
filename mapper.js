@@ -8,7 +8,7 @@ function map(arr, func){
 
 function flatMap(arr,func){
     return arr.reduce(
-        (acc, item) => acc.concat(func(item)),
+        (acc, val, i , arr) => acc.concat(func(val, i, arr)),
         []
     )
 }
