@@ -1,6 +1,6 @@
 export const  getArchitects= () => {
-    let a = document.getElementsByTagName('a');
-    let other = document.getElementsByTagName('span');
+    let a = document.getElementsByTagName('a')
+    let other = document.getElementsByTagName('span')
     return [
         a,
         other,
