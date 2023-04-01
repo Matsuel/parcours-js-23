@@ -1,4 +1,4 @@
-export function getArchitects() {
+export const  getArchitects= () => {
     const a = document.getElementsByTagName("a");
     const other = document.getElementsByTagName("span");
     return [
@@ -7,21 +7,21 @@ export function getArchitects() {
     ];
 }
 
-export function getClassical()  {
+export const  getClassical= () => {
     return [
         document.getElementsByClassName("a.classical"),
         document.getElementsByClassName("a:not(.classical)"),
     ];
 }
 
-export function getActive ()  {
+export const getActive = () =>  {
     return [
         document.querySelectorAll("a.classical.active"),
         document.querySelectorAll("a.classical:not(.active)"),
     ];
 }
 
-export function getBonannoPisano()  {
+export const  getBonannoPisano= () =>  {
     return [
         document.getElementById("bonanno-pisano"),
         document.querySelectorAll("a.classical.active"),
