@@ -1,4 +1,4 @@
-function getArchitects() {
+export function getArchitects() {
     const a = document.getElementsByTagName("a");
     const other = document.getElementsByTagName("span");
     return [
@@ -27,5 +27,3 @@ function getBonannoPisano()  {
         document.querySelectorAll("a.classical.active"),
     ];
 }
-
-export { getArchitects, getClassical, getActive, getBonannoPisano };
