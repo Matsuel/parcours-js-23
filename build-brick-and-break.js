@@ -17,11 +17,11 @@ export function build(numberOfBricks){
 
 export function repair(number){
     for (let i=1; i<=number; i++){
-        let block= document.getElementById("brick-"+String(i));
+        let block= document.getElementById("brick-"+i);
         if ((i+1)%3===0){
             block.dataset.repaired= "in progress";
         }else{
-            block.dataset.repaired= "true";
+            block.dataset.repaired= true;
         }
     }
 }
