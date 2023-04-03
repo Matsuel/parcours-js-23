@@ -25,8 +25,8 @@ export function getActive() {
 
 export function  getBonannoPisano() {
     let rep =[];
-    let bonanno = Array.from(document.getElementById('Bonannopisano'))
-    let other = Array.from(document.querySelectorAll('a:not(#Bonannopisano)'))
+    let bonanno = Array.from(document.getElementById('BonannoPisano'))
+    let other = Array.from(document.querySelectorAll('a:not(#BonannoPisano)'))
     rep.push(bonanno)
     rep.push(other)
     return rep;
