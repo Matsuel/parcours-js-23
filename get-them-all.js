@@ -18,8 +18,8 @@ export function getClassical() {
 
 export function getActive() {
     return [
-        document.querySelectorAll("a.classical.active"),
-        document.querySelectorAll("a.classical:not(.active)"),
+        Array.from(document.querySelectorAll("a.classical.active")),
+        Array.from(document.querySelectorAll("a.classical:not(.active)")),
     ];
 }
 
