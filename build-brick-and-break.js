@@ -1,5 +1,5 @@
 export function build(numberOfBricks){
-    let body = document.querySelector("body")[0];
+    let body = document.getElementsByTagName("body")[0];
     let i=1;
     setInterval(() => {
         let block=document.createElement("div");
