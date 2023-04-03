@@ -18,7 +18,7 @@ export function build(numberOfBricks){
 export function repair(...nbid){
     nbid.forEach((n)=>{
         let brick= document.getElementById("brick-"+n);
-        brick.getAttribute("foundation")? brick.dataset.repaired= "in progress": brick.dataset.repaired= true;
+        brick.getAttribute("foundation")? (brick.dataset.repaired= "in progress"): (brick.dataset.repaired= true);
     })
 }
 
