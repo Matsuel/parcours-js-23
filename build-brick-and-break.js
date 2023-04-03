@@ -3,9 +3,9 @@ export function build(numberOfBricks){
     setInterval(function(){
         let block=document.createElement("div");
         block.id="brick-"+String(i);
-        document.body.append(block);
         block.innerHTML=String(i);
-        if ((i+1)%3===0) block.dataset.foundation= true;
+        (i+1)%3===0 ? block.dataset.repaired= true : null;
+        document.body.append(block);
         i++;
         if (i> numberOfBricks){
             clearInterval(this);
