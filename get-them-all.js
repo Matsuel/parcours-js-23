@@ -26,6 +26,6 @@ export function getActive() {
 export function  getBonannoPisano() {
     return [
         document.getElementById("bonanno-pisano"),
-        document.querySelectorAll("a.classical.active"),
+        Array.from(document.querySelectorAll("a:not(#bonanno-pisano)")),
     ];
 }
