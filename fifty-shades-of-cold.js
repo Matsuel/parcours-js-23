@@ -2,9 +2,9 @@ import {Colors } from './fifty-shades-of-cold.data.js';
 
 export function generateClasses(){
     const style= document.createElement('style');
-    Colors.forEach(color => {
-        style.innerHTML += `.${color} {\n background: ${color};\n }\n\n`;
-    });
+    for (const color of Colors) {
+        style.innerHTML += `.${color} { background-color: ${color}; }`;
+    }
     document.head.appendChild(style);
 }  
 
