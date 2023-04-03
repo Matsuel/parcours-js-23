@@ -9,16 +9,11 @@ export function generateClasses(){
 }  
 
 export function generateColdShades(){
-    colors.forEach(color => {
-        if (
-            color.match(/(aqua|blue|turquoise|green|cyan|navy|purple)/) !== null
-        ) {
-            const div = document.createElement("div");
-            div.classList.add(color);
-            div.innerHTML = color;
-            body.appendChild(div);
-        }
-    });
+    for( let color of colors){
+        let div = document.createElement('div');
+        div.className = color;
+        document.body.appendChild(div);
+    }
 }
 
 export function choseShade(shade){
