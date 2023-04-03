@@ -19,10 +19,10 @@ export function repair(...nbid){
     nbid.forEach((n)=>{
         let brick= document.getElementById("brick-"+n);
         brick.getAttribute("foundation")? (brick.dataset.repaired= "in progress"): (brick.dataset.repaired= true);
-    })
+    });
 }
 
 export function destroy(){
-    let bricks= document.querySelectorAll("div[id^='brick-']");
+    let bricks= document.getElementsByTagName("div");
     bricks[bricks.length-1].remove();
 }
