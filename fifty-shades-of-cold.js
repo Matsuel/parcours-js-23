@@ -10,7 +10,7 @@ export function generateClasses(){
 
 export function generateColdShades(){
     for( let color of colors){
-        if (color.match('aqua', 'blue', 'turquoise', 'green', 'cyan', 'navy', 'purple')){
+        if (!color.match('aqua', 'blue', 'turquoise', 'green', 'cyan', 'navy', 'purple')){
             let div = document.createElement('div');
             div.className = color;
             div.textContent = color;
