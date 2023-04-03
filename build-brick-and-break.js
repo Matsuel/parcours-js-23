@@ -3,7 +3,7 @@ export function build(numberOfBricks){
     setInterval(() => {
         let block=document.createElement("div");
         block.setAttribute("id", "brick-"+i);
-        (i+1)%3===0 ? block.dataset.repaired= true : null;
+        (i+1)%3===0 ? (block.dataset.foundation= true) : null;
         document.body.append(block);
         i++;
         if (i> numberOfBricks){
