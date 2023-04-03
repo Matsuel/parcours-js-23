@@ -3,7 +3,7 @@ import {Colors } from './fifty-shades-of-cold.data.js';
 export function generateClasses(){
     const style= document.createElement('style');
     Colors.forEach(color => {
-        style.innerHTML += `.${color} {\n background: ${color};\n}\n\n`;
+        style.innerHTML += `.${color} {\n background: ${color};\n }\n\n`;
     });
     document.head.appendChild(style);
 }  
