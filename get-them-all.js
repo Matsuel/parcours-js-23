@@ -1,10 +1,10 @@
 export const  getArchitects= () => {
+    let rep =[];
     let a = document.getElementsByTagName('a')
     let other = document.getElementsByTagName('span')
-    return [
-        a,
-        other,
-    ];
+    rep.push(a)
+    rep.push(other)
+    return rep;
 }
 
 export const  getClassical= () => {
