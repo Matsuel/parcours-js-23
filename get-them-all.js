@@ -8,10 +8,12 @@ export function getArchitects() {
 }
 
 export function getClassical() {
-    return [
-        Array.from(document.getElementsByClassName("a.classical")),
-        Array.from(document.getElementsByClassName("a:not(.classical)")),
-    ];
+    let rep =[];
+    let classical = Array.from(document.getElementsByClassName('classical'))
+    let other = Array.from(document.querySelectorAll('a:not(.classical)'))
+    rep.push(classical)
+    rep.push(other)
+    return rep;
 }
 
 export function getActive() {
