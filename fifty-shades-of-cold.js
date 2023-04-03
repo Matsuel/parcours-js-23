@@ -10,10 +10,14 @@ export function generateClasses(){
 
 export function generateColdShades(){
     colors.forEach(color => {
-        const div = document.createElement('div');
-        div.classList.add(color);
-        div.innerHTML = color;
-        document.body.appendChild(div);
+        if (
+            color.match(/(aqua|blue|turquoise|green|cyan|navy|purple)/) !== null
+        ) {
+            const div = document.createElement("div");
+            div.classList.add(color);
+            div.innerHTML = color;
+            body.appendChild(div);
+        }
     });
 }
 
