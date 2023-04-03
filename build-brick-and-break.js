@@ -1,15 +1,16 @@
 export function build(numberOfBricks){
-    let i=1;
-    setInterval(() => {
-        let block=document.createElement("div");
-        block.setAttribute("id", "brick-"+i);
-        (i+1)%3===0 ? (block.dataset.foundation= true) : null;
-        document.body.append(block);
-        i++;
-        if (i> numberOfBricks){
-            clearInterval(this);
+    let nb =1;
+
+    let i = setInterval(()=>{
+        let brick= document.createElement("div");
+        brick.id= "brick-"+nb;
+        (nb+1)%3===0? (brick.dataset.foundation= true): null;
+        document.body.appendChild(brick);
+        nb++;
+        if (nb>numberOfBricks){
+            clearInterval(i);
         }
-    }, 100);
+    })
     
 
 }
