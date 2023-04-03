@@ -17,7 +17,7 @@ function pick(obj,str){
 function omit(obj,str){
     var newObj = {};
     for(var key in obj){
-        if (obj.hasOwnProperty(key)) continue;
+        if (!obj.hasOwnProperty(key)) continue;
         if(typeof str === 'string'){
             if (!str.match(`^${key}$`)){
                 newObj[key] = obj[key];
