@@ -2,7 +2,7 @@ import {styles} from './pimp-my-style.data.js';
 let nb = 0;
 
 export function pimp(){
-    let button= document.getElementsByClassName('button');
+    let button= document.querySelector('button.button');
     if(button.classList.contains('unpimp')){
         nb--;
         button.classList.remove(styles[nb]);
