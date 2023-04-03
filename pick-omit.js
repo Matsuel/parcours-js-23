@@ -22,7 +22,7 @@ function omit(obj,str){
                 newObj[key] = obj[key];
             }
         }else{
-            if (str.includes(key)){
+            if (!str.includes(key)){
                 newObj[key] = obj[key];
             }
         }
