@@ -9,8 +9,8 @@ export function getArchitects() {
 
 export function getClassical() {
     return [
-        document.getElementsByClassName("a.classical"),
-        document.getElementsByClassName("a:not(.classical)"),
+        Array.from(document.getElementsByClassName("a.classical")),
+        Array.from(document.getElementsByClassName("a:not(.classical)")),
     ];
 }
 
