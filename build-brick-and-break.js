@@ -10,7 +10,7 @@ export function build(numberOfBricks){
         if (nb>numberOfBricks){
             clearInterval(i);
         }
-    })
+    },100);
     
 
 }
