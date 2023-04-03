@@ -1,7 +1,7 @@
 export function getArchitects() {
     let rep =[];
-    let a = document.getElementsByTagName('a')
-    let other = document.getElementsByTagName('span')
+    let a = Array.from(document.getElementsByTagName('a'))
+    let other = Array.from(document.getElementsByTagName('span'))
     rep.push(a)
     rep.push(other)
     return rep;
