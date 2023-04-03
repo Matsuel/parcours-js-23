@@ -1,11 +1,11 @@
 export function build(numberOfBricks){
+    let body = document.querySelector("body")[0];
     let i=1;
-    setInterval(function(){
+    setInterval(() => {
         let block=document.createElement("div");
-        block.id="brick-"+String(i);
-        block.innerHTML=String(i);
+        block.id="brick-"+i;
         (i+1)%3===0 ? block.dataset.repaired= true : null;
-        document.body.append(block);
+        body.append(block);
         i++;
         if (i> numberOfBricks){
             clearInterval(this);
