@@ -24,8 +24,10 @@ export function getActive() {
 }
 
 export function  getBonannoPisano() {
-    return [
-        document.getElementById("bonanno-pisano"),
-        Array.from(document.querySelectorAll("a:not(#bonanno-pisano)")),
-    ];
+    let rep =[];
+    let bonanno = Array.from(document.querySelectorAll('Bonanno-pisano'))
+    let other = Array.from(document.querySelectorAll('a:not(#Bonanno-pisano)'))
+    rep.push(bonanno)
+    rep.push(other)
+    return rep;
 }
