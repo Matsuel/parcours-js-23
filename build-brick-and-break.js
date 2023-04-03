@@ -1,15 +1,16 @@
 export function build(numberOfBricks){
     let i=1;
-    for (i=1; i<=numberOfBricks; i++){
-        setInterval(function(){
-            let block=document.createElement("div");
-            block.id="brick-"+String(i);
-            document.body.append(block);
-            block.innerHTML=String(i);
-            if ((i+1)%3===0) block.dataset.foundation= "true";
-            i++;
-        }, 100);
-    }
+    setInterval(function(){
+        let block=document.createElement("div");
+        block.id="brick-"+String(i);
+        document.body.appendChild(block);
+        block.innerHTML=String(i);
+        if ((i+1)%3===0) block.dataset.foundation= true;
+        i++;
+        if (i> numberOfBricks){
+            clearInterval(this);
+        }
+    }, 100);
     
 
 }
