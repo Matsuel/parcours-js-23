@@ -10,8 +10,8 @@ export function generateClasses(){
 
 export function generateColdShades(){
     let cold = ['aqua', 'blue', 'turquoise', 'green', 'cyan', 'navy', 'purple']
-    for( let color of colors){
-        if (cold.indexOf(color) > -1){
+    for(let color of colors){
+        if (cold.indexOf(color) === -1){
             let div = document.createElement('div');
             div.className = color;
             div.textContent = color;
