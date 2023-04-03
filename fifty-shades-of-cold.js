@@ -15,7 +15,7 @@ export function generateColdShades(){
             let div = document.createElement('div');
             div.className = color;
             div.textContent = color;
-            document.body.appendChild(div);
+            document.body.append(div);
         }
     }
 }
