@@ -23,7 +23,7 @@ function reduceKeys(db, reduce, acc= ""){
     for (let key in db) {
         acc = reduce(acc,key);
     }
-    if (acc.charAt(1)===" "){
+    if (acc.slice(0,2)===", "){
         return acc.substring(2, acc.length);
     }else if (acc.charAt(1)===":"){
         return acc.substring(1, acc.length);
