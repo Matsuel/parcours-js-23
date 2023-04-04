@@ -22,7 +22,7 @@ function reduceValues(db, reduce,acc = 0){
     let rep = {};
     for (let key in db) {
         if (!db.hasOwnProperty(key))  continue;
-        rep[key] = reduce(acc,db[key]);
+        rep = reduce(acc,db[key]);
     }
     return rep;
     
