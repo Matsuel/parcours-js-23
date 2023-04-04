@@ -1,7 +1,3 @@
-document.addEventListener('click', function(event){
-    createCircle(event)
-});
-
 let circles = [];
 let box;
 
@@ -35,6 +31,10 @@ class Circle{
         }
     }
 }
+
+document.addEventListener('click', event =>{
+    createCircle(event)
+});
 
 export function createCircle(event){
     if (event === undefined) return;
