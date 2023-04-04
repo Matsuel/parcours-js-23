@@ -8,7 +8,7 @@ export function compose(event){
         let div = document.createElement('div');
         div.classList.add('note');
         div.innerHTML = event.key;
-        div.style.backgroundColor= `rgb( ${(255/26)* (event.keyCode)}, ${(255/26)* (event.keyCode)}, ${(255/26)* (event.keyCode)})`;
+        div.style.backgroundColor= `rgb( ${(255/26)* (event.key.charCodeAt(0)-97)}, ${(255/26)* (event.key.charCodeAt(0)-97)}, ${(255/26)* (event.key.charCodeAt(0)-97)})`;
         document.body.appendChild(div);
     }else if (event.key === 'Backspace'){
         document.body.removeChild(document.body.lastElementChild);
