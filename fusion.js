@@ -21,7 +21,7 @@ function fusion(obj1, obj2){
             } else if (typeof obj1[key] === 'string') {
                 obj3[key] = obj1[key] +" "+ obj1[key];
             }else if (typeof obj1[key] === 'number') {
-                obj3[key] = obj1[key] + obj1[key];
+                obj3[key] = obj1[key];
             }else if (typeof obj1[key] === 'object') {
                 obj3[key] = fusion(obj1[key], obj1[key]);
             }else{
