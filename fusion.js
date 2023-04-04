@@ -16,33 +16,12 @@ function fusion(obj1, obj2){
                 }
             }
         }else{
-            if (obj1[key] instanceof Array) {
-                obj3[key] = obj1[key].concat(obj1[key]);
-            } else if (typeof obj1[key] === 'string') {
-                obj3[key] = obj1[key];
-            }else if (typeof obj1[key] === 'number') {
-                obj3[key] = obj1[key];
-            }else if (typeof obj1[key] === 'object') {
-                obj3[key] = fusion(obj1[key]);
-            }else{
-                if (obj2.hasOwnProperty(key)) {
-                    obj3[key] = obj2[key];
-                }
-            }
+            obj3[key] = obj1[key];
         }   
     }
     for (let key in obj2) {
-        if (!obj3.hasOwnProperty(key)) {
-            if (obj2[key] instanceof Array) {
-                obj3[key] = obj2[key];
-            } else if (typeof obj2[key] === 'string') {
-                obj3[key] = obj2[key];
-            }else if (typeof obj2[key] === 'number') {
-                obj3[key] = obj2[key];
-            }else if (typeof obj2[key] === 'object') {
-                obj3[key] = fusion(obj2[key]);
-            }else{
-            }
+        if (!obj1.hasOwnProperty(key)) {
+            obj3[key] = obj2[key];
         }
     }
     return obj3;
@@ -81,3 +60,8 @@ let e = fusion(
   )
 
 console.log(e)
+
+
+let w = fusion({ a: { b: 1 } }, { a: 1 })
+
+console.log(w)
