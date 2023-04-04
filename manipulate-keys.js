@@ -23,7 +23,7 @@ function reduceKeys(db, reduce, acc= ""){
     for (let key in db) {
         acc = reduce(acc,key);
     }
-    return acc.substring(1, acc.length);
+    return acc.substring(2, acc.length);
 }
 
 const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
