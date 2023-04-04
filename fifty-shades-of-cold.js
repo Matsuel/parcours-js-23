@@ -9,7 +9,7 @@ export function generateClasses(){
 }  
 
 export function generateColdShades(){
-    let cold = ['aliceblue','aqua', 'blue', 'turquoise', 'green', 'cyan', 'navy', 'purple']
+    let cold = ['aliceblue','aqua','aquamarine', 'blue', 'turquoise', 'green', 'cyan', 'navy', 'purple']
     for(let color of colors){
         if (cold.indexOf(color) > -1){
             let div = document.createElement('div');
