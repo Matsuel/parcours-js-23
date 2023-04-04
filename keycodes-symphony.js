@@ -12,5 +12,7 @@ export function compose(event){
         document.body.appendChild(div);
     }else if (event.key === 'Backspace'){
         document.body.removeChild(document.body.lastElementChild);
+    }else if (event.key === 'Escape'){
+        document.body.innerHTML = '';
     }
 }  
