@@ -18,11 +18,11 @@ function mapValues(db, map){
     return rep;
 }
 
-function reduceValues(db, reduce){
+function reduceValues(db, reduce,acc = 0){
     let rep = {};
     for (let key in db) {
         if (!db.hasOwnProperty(key))  continue;
-        rep[key] = reduce(db[key]);
+        rep[key] = reduce(acc,db[key]);
     }
     return rep;
     
