@@ -76,9 +76,9 @@ class Box {
     inReactangle(x, y) {
         if (
             x > box.x &&
-            x + this.diameter < box.x + box.width &&
+            x + this.size < box.x + box.width &&
             y > box.y &&
-            y + this.diameter < box.y + box.height
+            y + this.size < box.y + box.height
         ) {
             return true;
         } else {
