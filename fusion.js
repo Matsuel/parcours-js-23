@@ -1,31 +1,40 @@
 function fusion(obj1, obj2){
     let obj3 = {};
     for (let key in obj1) {
+        if (!obj1.hasOwnProperty(key))  continue;
         if (obj2.hasOwnProperty(key)) {
-            if (Array.isArray(obj1[key]) && (Array.isArray(obj2[key]))) {
+            if (is.obj(obj1[key]) && is.obj(obj2[key])) {
+                obj3[key] = fusion(obj1[key], obj2[key]);
+            }else if (Array.isArray(obj1[key]) && (Array.isArray(obj2[key]))) {
                 obj3[key] = obj1[key].concat(obj2[key]);
-            } else if ((typeof obj1[key] === 'string')&& (typeof obj2[key] === 'string')) {
-                obj3[key] = obj1[key] +" "+ obj2[key];
             }else if ((typeof obj1[key] === 'number') && (typeof obj2[key] === 'number')) {
                 obj3[key] = obj1[key] + obj2[key];
-            }else if ((typeof obj1[key] === 'object')&& (typeof obj2[key] === 'object')) {
-                obj3[key] = fusion(obj2[key], obj2[key]);
+            }else if ((typeof obj1[key] === 'string')&& (typeof obj2[key] === 'string')) {
+                obj3[key] = obj1[key] +" "+ obj2[key];
             }else{
-                if (obj2.hasOwnProperty(key)) {
-                    obj3[key] = obj2[key];
-                }
+                obj3[key] = obj2[key];
             }
         }else{
             obj3[key] = obj1[key];
         }   
     }
     for (let key in obj2) {
+        if (!obj2.hasOwnProperty(key))  continue;
         if (!obj1.hasOwnProperty(key)) {
             obj3[key] = obj2[key];
         }
     }
     return obj3;
 }
+
+
+const is = {};
+is.num = (n) => typeof n === "number";
+is.str = (n) => typeof n === "string";
+is.arr = (n) => Array.isArray(n);
+is.obj = (n) => typeof n === "object" && !is.fun(n) && !is.arr(n) && n !== null;
+is.fun = (n) => typeof n === "function";
+
 
 // let a=fusion({ arr: [1, "2"] }, { arr: [2] }); // -> { arr: [ 1, '2', 2 ] }
 // let ab=fusion({ arr: [], arr1: [5] },{ arr: [10, 3], arr1: [15, 3], arr2: ["7", "1"] }); // ->{ arr: [ 10, 3 ], arr1: [ 5, 15, 3 ], arr2: [ '7', '1' ] }
