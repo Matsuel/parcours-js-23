@@ -14,6 +14,7 @@ class Circle{
     draw(){
         this.HTML = document.createElement('div');
         this.HTML.classList.add('circle');
+        this.HTML.style.position = 'absolute';
         this.HTML.style.left = this.x + 'px';
         this.HTML.style.top = this.y + 'px';
         this.HTML.style.background = 'white';
@@ -28,6 +29,31 @@ class Circle{
         }else{
             this.isTrapped = false;
             this.HTML.style.background = "white";
+        }
+    }
+
+    move(x, y) {
+        this.trap();
+        if (!this.isTrapped) {
+            this.x = x;
+            this.y = y;
+            this.HTML.style.top = this.y + "px";
+            this.HTML.style.left = this.x + "px";
+        } else {
+            if (this.inReactangle(x, y)) {
+                this.x = x;
+                this.y = y;
+                this.HTML.style.top = this.y + "px";
+                this.HTML.style.left = this.x + "px";
+            } else {
+                if (this.inReactangle(x, this.y)) {
+                    this.x = x;
+                    this.HTML.style.left = this.x + "px";
+                } else if (this.inReactangle(this.x, y)) {
+                    this.y = y;
+                    this.HTML.style.top = this.y + "px";
+                }
+            }
         }
     }
 }
@@ -46,6 +72,19 @@ class Box {
         this.width = this.HTML.offsetWidth + 1; // +1 to account for the border
         this.height = this.HTML.offsetHeight + 1;
     }
+
+    inReactangle(x, y) {
+        if (
+            x > box.x &&
+            x + this.diameter < box.x + box.width &&
+            y > box.y &&
+            y + this.diameter < box.y + box.height
+        ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 document.body.addEventListener('click', event =>{
@@ -63,7 +102,8 @@ export function createCircle(event){
 }
 
 export function moveCircle(event){
-
+    if (event === undefined || circles.length ===0) return;
+    circles[circles.length-1].move(event.clientX-25, event.clientY-25);
 }
 
 export function setBox(){
