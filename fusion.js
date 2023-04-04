@@ -2,7 +2,7 @@ function fusion(obj1, obj2){
     let obj3 = {};
     for (let key in obj1) {
         if (obj2.hasOwnProperty(key)) {
-            if ((obj1[key] instanceof Array) && (obj2[key] instanceof Array)) {
+            if (Array.isArray(obj1[key]) && (Array.isArray(obj2[key]))) {
                 obj3[key] = obj1[key].concat(obj2[key]);
             } else if ((typeof obj1[key] === 'string')&& (typeof obj2[key] === 'string')) {
                 obj3[key] = obj1[key] +" "+ obj2[key];
@@ -65,3 +65,10 @@ console.log(e)
 let w = fusion({ a: { b: 1 } }, { a: 1 })
 
 console.log(w)
+
+let er= fusion(
+    { a: { b: [1, 2], c: { d: 2 } } },
+    { a: { b: [0, 2, 1], c: { d: 23 } } }
+  )
+
+console.log(er)
