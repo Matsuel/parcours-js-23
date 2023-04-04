@@ -23,10 +23,10 @@ function reduceKeys(db, reduce, acc= ""){
     for (let key in db) {
         acc = reduce(acc,key);
     }
-    if (acc.charAt(0)===" "){
-        return acc.substring(2, acc.length);
+    if (acc.charAt(1)===" "){
+        return acc.substring(1, acc.length);
     }
-    return acc.substring(1, acc.length);
+    return acc.substring(2, acc.length);
 }
 
 const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
