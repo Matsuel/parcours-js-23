@@ -10,5 +10,7 @@ export function compose(event){
         div.innerHTML = event.key;
         div.style.backgroundColor= `rgb( (255/ ${event.keyCode} ), (255/ ${event.keyCode} ), (255/ ${event.keyCode} ))`;
         document.body.appendChild(div);
-    } 
+    }else if (event.key === 'Backspace'){
+        document.body.removeChild(document.body.lastElementChild);
+    }
 }  
