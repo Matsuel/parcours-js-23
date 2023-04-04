@@ -20,12 +20,13 @@ function mapKeys(db,m){
 
 
 function reduceKeys(db, reduce, acc= ""){
+    if (acc=== undefined) {let undef=true};
     for (let key in db) {
         acc = reduce(acc,key);
     }
     if (acc.slice(0,2)===", "){
         return acc.substring(2, acc.length);
-    }else if (acc[0]===":"){
+    }else if (undef && acc[0]===":"){
         return acc.substring(0, acc.length);
     }
     return acc.substring(0, acc.length);
