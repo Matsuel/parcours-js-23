@@ -25,6 +25,8 @@ function reduceKeys(db, reduce, acc= ""){
     }
     if (acc.charAt(1)===" "){
         return acc.substring(2, acc.length);
+    }else if (acc.charAt(1)===":"){
+        return acc.substring(2, acc.length);
     }
     return acc.substring(1, acc.length);
 }
