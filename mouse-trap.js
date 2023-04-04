@@ -32,7 +32,7 @@ class Circle{
     }
 }
 
-document.addEventListener('click', event =>{
+document.body.addEventListener('click', event =>{
     createCircle(event)
 });
 
