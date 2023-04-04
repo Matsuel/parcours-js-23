@@ -36,6 +36,7 @@ class Circle{
     }
 }
 
-function createCircle(event){
-
+export function createCircle(event){
+    if (event === undefined) return;
+    new Circle(event.clientX-25, event.clientY-25);
 }
