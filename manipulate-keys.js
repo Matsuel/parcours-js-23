@@ -23,6 +23,7 @@ function reduceKeys(db, reduce, acc= ""){
     let undef=false;
     if (acc=== undefined) {
         undef=true
+        acc="";
     };
     for (let key in db) {
         acc = reduce(acc,key);
