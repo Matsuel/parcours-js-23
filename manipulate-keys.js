@@ -34,9 +34,9 @@ function reduceKeys(db, reduce, acc= ""){
         }else if (acc[0]===":"){
             return acc.substring(0, acc.length);
         }
+        return acc.substring(0, acc.length);
     }
-    
-    return acc.substring(0, acc.length);
+    return acc;
 }
 
 const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
