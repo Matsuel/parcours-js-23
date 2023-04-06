@@ -27,11 +27,14 @@ function reduceKeys(db, reduce, acc= ""){
     if (acc[0]=== ":" && acc[acc.length-1]!== ":"){
         return acc.substring(1, acc.length);
     }
-    if (acc.substring(0,2)===", "){
-        return acc.substring(2, acc.length);
-    }else if (acc[0]===":"){
-        return acc.substring(0, acc.length);
+    if (typeof acc !== "number"){
+        if (acc.substring(0,2)===", "){
+            return acc.substring(2, acc.length);
+        }else if (acc[0]===":"){
+            return acc.substring(0, acc.length);
+        }
     }
+    
     return acc.substring(0, acc.length);
 }
 
