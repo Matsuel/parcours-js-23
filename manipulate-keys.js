@@ -19,20 +19,21 @@ function mapKeys(db,m){
 }
 
 
-function reduceKeys(db, red, init= ""){
+function reduceKeys(db, reduce, acc= ""){
     let undef=false;
-    if (init=== undefined) {
+    if (acc=== undefined) {
         undef=true
-        init="";
+        acc="";
     };
-    let rep = Object.keys(db).reduce((acc, el) => {
-        return red(acc, el, init);
-    }, init);
-    if (typeof rep !== "number") {
-        if (rep.slice(0, 2) === ", ") rep = rep.slice(2);
-        if (undef && rep[0] === ":") rep = rep.slice(1);
+    for (let key in db) {
+        acc = reduce(acc,key);
     }
-    return rep;
+    if (acc.slice(0,2)===", "){
+        return acc.substring(2, acc.length);
+    }else if (undef && acc[0]===":"){
+        return acc.substring(0, acc.length);
+    }
+    return acc.substring(0, acc.length);
 }
 
 const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
