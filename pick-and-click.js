@@ -42,6 +42,7 @@ axisY.setAttribute("y1", "0");
 axisY.setAttribute("y2", "0");
 svg.appendChild(axisY);
 
+document.body.appendChild(svg);
 export function pick(event){
     if (event=== undefined) return;
     const huevalue = Math.round(event.clientX / window.innerWidth * 360);
