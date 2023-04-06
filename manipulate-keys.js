@@ -24,10 +24,11 @@ function reduceKeys(db, reduce, acc= ""){
     for (let key in db) {
         acc = reduce(acc,key);
     }
-    if (acc[0]=== ":" && acc[acc.length-1]!== ":"){
-        return acc.substring(1, acc.length);
-    }
+    
     if (typeof acc !== "number"){
+        if (acc[0]=== ":" && acc[acc.length-1]!== ":"){
+            return acc.substring(1, acc.length);
+        }
         if (acc.substring(0,2)===", "){
             return acc.substring(2, acc.length);
         }else if (acc[0]===":"){
