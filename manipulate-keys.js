@@ -25,15 +25,14 @@ function reduceKeys(db, reduce, acc= ""){
         undef=true
         acc="";
     };
-    for (let key in db) {
-        acc = reduce(acc,key);
+    let rep = Object.keys(obj).reduce((acc, curr) => {
+        return callback(acc, curr, initialValue);
+    }, initialValue);
+    if (typeof rep !== "number") {
+        if (rep.slice(0, 2) === ", ") rep = rep.slice(2);
+        if (undef && rep[0] === ":") rep = rep.slice(1);
     }
-    if (acc.slice(0,2)===", "){
-        return acc.substring(2, acc.length);
-    }else if (undef && acc[0]===":"){
-        return acc.substring(0, acc.length);
-    }
-    return acc.substring(0, acc.length);
+    return rep;
 }
 
 const nutrients = { carbohydrates: 12, protein: 20, fat: 5 }
