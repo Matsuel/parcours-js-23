@@ -31,7 +31,7 @@ function reduceKeys(db, reduce, acc= ""){
     if (acc[0]=== ":" && acc[acc.length-1]!== ":"){
         return acc.substring(1, acc.length);
     }
-    if (acc.slice(0,2)===", "){
+    if ([acc[0],acc[1]]===", "){
         return acc.substring(2, acc.length);
     }else if (undef && acc[0]===":"){
         return acc.substring(0, acc.length);
