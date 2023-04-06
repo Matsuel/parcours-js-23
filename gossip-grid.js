@@ -50,9 +50,9 @@ export function grid(){
     range2.addEventListener("input", (event)=>{
         const elements = document.querySelectorAll(".gossip");
         console.log(elements.length);
-        for (let i = 0; i < elements.length; i++){
-            elements[i].remove();
-        }
+        elements.forEach((element)=>{
+            element.style.fontSize = `${event.target.value}px`;
+        });
     });
 
     const range3 = document.createElement("input");
