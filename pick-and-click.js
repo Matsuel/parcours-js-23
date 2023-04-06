@@ -26,21 +26,21 @@ svg.setAttribute("height", "100%");
 svg.setAttribute("viewBox", "0 0 100 100");
 svg.setAttribute("preserveAspectRatio", "none");
 
-const axiX = document.createElementNS("http://www.w3.org/2000/svg", "line");
-axiX.id = "axisX";
-axiX.setAttribute("width", "100%");
-axiX.setAttribute("height", "100%");
-axiX.setAttribute("x1", "0");
-axiX.setAttribute("x2", "0");
-svg.appendChild(axiX);
+const axisX = document.createElementNS("http://www.w3.org/2000/svg", "line");
+axisX.id = "axisX";
+axisX.setAttribute("width", "100%");
+axisX.setAttribute("height", "100%");
+axisX.setAttribute("x1", "0");
+axisX.setAttribute("x2", "0");
+svg.appendChild(axisX);
 
-const axiY = document.createElementNS("http://www.w3.org/2000/svg", "lien");
-axiY.id = "axisY";
-axiY.setAttribute("width", "100%");
-axiY.setAttribute("height", "100%");
-axiY.setAttribute("y1", "0");
-axiY.setAttribute("y2", "0");
-svg.appendChild(axiY);
+const axisY = document.createElementNS("http://www.w3.org/2000/svg", "lien");
+axisY.id = "axisY";
+axisY.setAttribute("width", "100%");
+axisY.setAttribute("height", "100%");
+axisY.setAttribute("y1", "0");
+axisY.setAttribute("y2", "0");
+svg.appendChild(axisY);
 
 export function pick(event){
     if (event=== undefined) return;
@@ -51,11 +51,11 @@ export function pick(event){
     hsl.innerHTML = color;
     hue.innerHTML = `${String(huevalue)}`;
     luminosity.innerHTML = `${String(lum)}`;
-    axiX.setAttribute("x1", event.clientX);
-    axiX.setAttribute("x2", `${event.clientX}`);
-    axiY.setAttribute("y1", `${event.clientY}`);
-    axiY.setAttribute("y2", `${event.clientY}`);
-    console.log(axiX.getAttribute("x1"));
+    axisX.setAttribute("x1", event.clientX);
+    axisX.setAttribute("x2", `${event.clientX}`);
+    axisY.setAttribute("y1", `${event.clientY}`);
+    axisY.setAttribute("y2", `${event.clientY}`);
+    console.log(axisX.getAttribute("x1"));
 
 }
 
