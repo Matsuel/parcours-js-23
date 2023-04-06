@@ -21,11 +21,12 @@ function mapKeys(db,m){
 
 function reduceKeys(db, reduce, acc= ""){
     if (acc=== undefined) acc="";
+    for (let key in db) {
+        acc = reduce(acc,key);
+    }   
     
     if (typeof acc !== "number"){
-        for (let key in db) {
-            acc = reduce(acc,key);
-        }    
+         
         if (acc[0]=== ":" && acc[acc.length-1]!== ":"){
             return acc.substring(1, acc.length);
         }
