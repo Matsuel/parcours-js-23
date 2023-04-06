@@ -18,7 +18,7 @@ export function grid(){
             document.querySelectorAll(".gossip").forEach((element,i)=>{
                 (i>0) ? element.remove() : null;
             });
-            gossips.push(textarea.value);
+            gossips.unshift(textarea.value);
             textarea.value = "";
             displayCards();
         };
