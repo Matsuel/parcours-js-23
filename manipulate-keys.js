@@ -19,14 +19,14 @@ function mapKeys(db,m){
 }
 
 
-function reduceKeys(db, reduce, acc= ""){
+function reduceKeys(db, red, acc= ""){
     let undef=false;
     if (acc=== undefined) {
         undef=true
         acc="";
     };
-    let rep = Object.keys(obj).reduce((acc, curr) => {
-        return callback(acc, curr, initialValue);
+    let rep = Object.keys(db).reduce((acc, el) => {
+        return red(acc, el, initialValue);
     }, initialValue);
     if (typeof rep !== "number") {
         if (rep.slice(0, 2) === ", ") rep = rep.slice(2);
