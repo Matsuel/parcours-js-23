@@ -44,7 +44,7 @@ function lowCarbs(object){
         if (rep==={}){
             rep[key]= object[key];
         }
-        if(rep[key]< object[key]){
+        if(object[key]<=50){
             rep[key]= object[key]
         }
     }
