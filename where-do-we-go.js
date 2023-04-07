@@ -45,7 +45,13 @@ function getPlace(){
     const scroll = window.scrollY+ size/2;
     const index = Math.floor(scroll/size);
     const place = allPlaces[index];
-    const coordinates = places[index].coordinates;
+    let coordinates="";
+    for(const p of places){
+        if(p.name===place[1]){
+            coordinates = p.coordinates;
+            break;
+        }
+    }
     console.log(coordinates);
     (place[1][place[1].length-1]===" ")? place[1] = place[1].substring(0, place[1].length-1): place[1];
     a.textContent= `${place[1].trim() } \n ${coordinates}`;
