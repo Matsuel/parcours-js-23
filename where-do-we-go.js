@@ -59,7 +59,7 @@ function sortPlacesByCoordinates(){
         let place = places[i];
         let placeCoordinates = place.coordinates;
         let placeCoordinatesArray = placeCoordinates.split(" ");
-        allPlaces.push([placeCoordinatesArray[0], place.name, place.color]);
+        allPlaces.push([placeCoordinatesArray[0], placeCoordinates[1], place.name, place.color]);
     }
     for (let i=0 ; i<allPlaces.length ; i++){
         for (let j=i ; j<allPlaces.length; j++){
