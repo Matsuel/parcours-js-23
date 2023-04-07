@@ -55,7 +55,7 @@ function getPlace(){
     a.textContent= `${place[1]}\n${coordinates}`;
     a.style.color = allPlaces[index][2];
     a.href = `https://www.google.com/maps/place/${CoordinatesGoogle(
-        places[index].coordinates
+        coordinates
     )}/`;
     a.target = "_blank";
 }
