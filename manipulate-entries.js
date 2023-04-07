@@ -27,3 +27,26 @@ function reduceEntries(object, red, init){
     }
     return acc;
 }
+
+function totalCalories(object){
+    let total=0;
+
+    for (let key in object){
+        total+= object[key];
+    }
+
+    return total;
+}
+
+function lowCarbs(object){
+    let rep={};
+    for (let key in object){
+        if (rep==={}){
+            rep[key]= object[key];
+        }
+        if(rep[key]< object[key]){
+            rep[key]= object[key]
+        }
+    }
+    return rep;
+}
