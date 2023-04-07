@@ -11,10 +11,10 @@ function filterEntries(object,filter){
 function mapEntries(object,map){
     let temp ={};
     let rep= {};
-    for( let key of object){
+    for( let key in object){
         temp[key]= map([key, object[key]])
     }
-    for(let key of temp){
+    for(let key in temp){
         rep[temp[key][0]]= temp[key][1]
     }
     return rep;
