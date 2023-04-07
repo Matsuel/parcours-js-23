@@ -45,7 +45,9 @@ function getPlace(){
     const scroll = window.scrollY+ size/2;
     const index = Math.floor(scroll/size);
     const place = allPlaces[index];
-    a.textContent= `${place[1]} \n ${place[0]}`;
+    const coordinates = places[index].coordinates;
+    console.log(coordinates);
+    a.textContent= `${place[1]} \n ${coordinates}`;
     a.style.color = allPlaces[index][2];
     a.href = `https://www.google.com/maps/place/${CoordinatesGoogle(
         places[index].coordinates
