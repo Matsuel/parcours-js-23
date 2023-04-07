@@ -50,3 +50,13 @@ function lowCarbs(object){
     }
     return rep;
 }
+
+
+const groceriesCart = { orange: 500, oil: 20, sugar: 480 }
+
+console.log('Total calories:')
+console.log(totalCalories(groceriesCart))
+console.log('Items with low carbs:')
+console.log(lowCarbs(groceriesCart))
+// console.log('Total cart nutional facts:')
+// console.log(totalCart(groceriesCart))
