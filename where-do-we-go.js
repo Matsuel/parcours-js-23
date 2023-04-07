@@ -47,7 +47,7 @@ function getPlace(){
     const place = allPlaces[index];
     a.textContent= `${place[0]} \n ${place[1]}`;
     a.style.color = allPlaces[index][2];
-    a.href = `https://www.google.com/maps/place/${urlEncodeCoordinates(
+    a.href = `https://www.google.com/maps/place/${CoordinatesGoogle(
         places[index].coordinates
     )}/`;
     a.target = "_blank";
@@ -63,8 +63,11 @@ function sortPlacesByCoordinates(){
     }
     for (let i=0 ; i<allPlaces.length ; i++){
         for (let j=i ; j<allPlaces.length; j++){
-            let coordinates1 = allPlaces[i][0].replace(",", "").replace("°", "").replace("'", "").replace("N", "").replace("E", "").replace("S", "").replace("W", "").replace('"', "");              
-            let coordinates2 = allPlaces[j][0].replace(",", "").replace("°", "").replace("'", "").replace("N", "").replace("E", "").replace("S", "").replace("W", "").replace('"', "");
+            let coordinates1 = allPlaces[i][0].replace(",", "").replace("°", "").replace("'", "").replace("N", "").replace("E", "").replace("S", "").replace("W", "").replace('"', "").replace(".", "");  
+            (allPlaces[i][0].indexOf("S")!== -1)? coordinates1 = -coordinates1: coordinates1;
+            // console.log(coordinates1);            
+            let coordinates2 = allPlaces[j][0].replace(",", "").replace("°", "").replace("'", "").replace("N", "").replace("E", "").replace("S", "").replace("W", "").replace('"', "").replace(".", "");
+            (allPlaces[j][0].indexOf("S")!== -1)? coordinates2 = -coordinates2: coordinates2;
             if (coordinates1 < coordinates2){
                 let temp = allPlaces[i];
                 allPlaces[i] = allPlaces[j];
@@ -75,7 +78,7 @@ function sortPlacesByCoordinates(){
     return allPlaces;
 }
 
-function urlEncodeCoordinates(coordinates) {
+function CoordinatesGoogle(coordinates) {
     return coordinates
         .replaceAll(" ", "%20")
         .replaceAll("°", "%C2%B0")
