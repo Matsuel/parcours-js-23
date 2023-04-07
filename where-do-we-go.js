@@ -52,10 +52,7 @@ function getPlace(){
             break;
         }
     }
-    console.log(coordinates);
-    let name= place[1].trim();
-    console.log(name);
-    a.textContent= `${name}\n${coordinates}`;
+    a.textContent= `${place[1]}\n${coordinates}`;
     a.style.color = allPlaces[index][2];
     a.href = `https://www.google.com/maps/place/${CoordinatesGoogle(
         places[index].coordinates
