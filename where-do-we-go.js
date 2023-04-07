@@ -48,7 +48,7 @@ function getPlace(){
     const coordinates = places[index].coordinates;
     console.log(coordinates);
     (place[1][place[1].length-1]===" ")? place[1] = place[1].substring(0, place[1].length-1): place[1];
-    a.textContent= `${(place[1][place[1].length-1]===" ")? place[1].substring(0,place[1].length): place[1]} \n ${coordinates}`;
+    a.textContent= `${place[1].trim() } \n ${coordinates}`;
     a.style.color = allPlaces[index][2];
     a.href = `https://www.google.com/maps/place/${CoordinatesGoogle(
         places[index].coordinates
