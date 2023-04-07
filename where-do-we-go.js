@@ -65,7 +65,7 @@ function sortPlacesByCoordinates(){
         for (let j=i ; j<allPlaces.length; j++){
             let coordinates1 = allPlaces[i][0].replace(",", "").replace("°", "").replace("'", "").replace("N", "").replace("E", "").replace("S", "").replace("W", "").replace('"', "");              
             let coordinates2 = allPlaces[j][0].replace(",", "").replace("°", "").replace("'", "").replace("N", "").replace("E", "").replace("S", "").replace("W", "").replace('"', "");
-            if (coordinates1 > coordinates2){
+            if (coordinates1 < coordinates2){
                 let temp = allPlaces[i];
                 allPlaces[i] = allPlaces[j];
                 allPlaces[j] = temp;
