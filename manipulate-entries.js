@@ -19,3 +19,11 @@ function mapEntries(object,map){
     }
     return rep;
 }
+
+function reduceEntries(object, red, init){
+    let acc= init;
+    for (let key in object){
+        acc= red(acc, [key, object[key]]);
+    }
+    return acc;
+}
