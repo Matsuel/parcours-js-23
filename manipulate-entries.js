@@ -38,19 +38,36 @@ function totalCalories(object){
     return total;
 }
 
-function lowCarbs(object){
-    let rep={};
-    for (let key in object){
-        if (rep==={}){
-            rep[key]= object[key];
-        }
-        if(object[key]<=50){
-            rep[key]= object[key]
-        }
-    }
-    return rep;
+function lowCarbs(el) {
+    return filterEntries(el, (element) => {let value = (nutritionDB[element[0]]["carbs"] / 100) * element[1];return parseInt(value) <= 50;});
 }
 
+function totalCalories(entries) {
+    return Number(
+        reduceEntries(
+            entries,
+            (acc, curr) => {
+                let value = (nutritionDB[curr[0]]["calories"] / 100) * curr[1];
+                return acc + value;
+            },
+            0
+        ).toFixed(1)
+    );
+}
+
+function cartTotal(entries) {
+    let res = {};
+    for (let key in entries) {
+        res[key] = {};
+        for (let dbKey in nutritionDB[key]) {
+            res[key][dbKey] =
+                Math.round(
+                    (entries[key] / 100) * nutritionDB[key][dbKey] * 1000
+                ) / 1000;
+        }
+    }
+    return res;
+}
 
 const groceriesCart = { orange: 500, oil: 20, sugar: 480 }
 
