@@ -28,14 +28,18 @@ function reduceEntries(object, red, init){
     return acc;
 }
 
-function totalCalories(object){
-    let total=0;
 
-    for (let key in object){
-        total+= object[key];
-    }
-
-    return total;
+function totalCalories(entries) {
+    return Number(
+        reduceEntries(
+            entries,
+            (acc, curr) => {
+                let value = (nutritionDB[curr[0]]["calories"] / 100) * curr[1];
+                return acc + value;
+            },
+            0
+        ).toFixed(1)
+    );
 }
 
 function lowCarbs(el) {
