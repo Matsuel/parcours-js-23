@@ -42,19 +42,6 @@ function lowCarbs(el) {
     return filterEntries(el, (element) => {let value = (nutritionDB[element[0]]["carbs"] / 100) * element[1];return parseInt(value) <= 50;});
 }
 
-function totalCalories(entries) {
-    return Number(
-        reduceEntries(
-            entries,
-            (acc, curr) => {
-                let value = (nutritionDB[curr[0]]["calories"] / 100) * curr[1];
-                return acc + value;
-            },
-            0
-        ).toFixed(1)
-    );
-}
-
 function cartTotal(entries) {
     let res = {};
     for (let key in entries) {
